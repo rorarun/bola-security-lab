@@ -1,0 +1,110 @@
+{
+  "evidence_kind": "M1 foundation verification, not a BOLA experiment",
+  "recorded_at_utc": "2026-11-14T23:01:33.900567+00:00",
+  "base_commit": "6f4e766206894aa30b8eee406429f1fa18a7ee72",
+  "git_status": "M README.md\n?? .dockerignore\n?? .env.example\n?? .github/\n?? Dockerfile\n?? compose.yaml\n?? docs/\n?? migrations/\n?? pyproject.toml\n?? requirements-dev.lock\n?? requirements.lock\n?? results/\n?? scripts/\n?? src/\n?? tests/",
+  "source_sha256": {
+    ".dockerignore": "fa7da6a336094a888f08d2f29612335cc7ea47d7094ef49c9ccf037cff4dd33a",
+    ".env.example": "ebfcf0590a11b6cb0ec2a961e3ddc25843830af72116eeff0b9d85be4d24a37d",
+    ".github/workflows/ci.yml": "6ff4a60162f1b87d4a84befc327a644161d1ae1673db2a74b6ad9d3b2cd34f25",
+    ".gitignore": "114f3cdc2057d610cbc810f69cbc4f195acec0cd15dd54e9b154cf5f6657fc24",
+    "Dockerfile": "40b0b9dfa370577fd2e2175da574b6316af6d80ab9704db820fcd39ef6e2c21d",
+    "README.md": "dc307dc9b70128f0dbec47b755e5994fccd68c71e361b2f04df59d0a97319e22",
+    "compose.yaml": "68e2d8d05e10a24410e4df01680feb68a8c14981d11d91e16261cdbf0b0ae76c",
+    "docs/architecture.md": "0d34ba046d8383ccbe5ef55dbbadc03aa45e3acfbe2034f370c7d95d8eac13bf",
+    "docs/demonstration.md": "3915f5e68f154b70b60d2c15e894bc158460983a6c4c2e5e34ab4ae559b066ef",
+    "docs/experiment-plan.md": "31ff6c5cc4d0bd70a8f956800e34321058e67429a46d1e4b6ba79c01acec67f6",
+    "docs/m1-verification.md": "78898a26ccc2e26f3f56f3f1d789d5521c84f925b5a0351de09f0583924dcc46",
+    "docs/permission-matrix.md": "344f1db6c2d467a471cdbe676bb75903569d2c79613f4fe0226b9e5fbae254c7",
+    "docs/references.md": "0ddd91f10e9e63f94ef4a6535c21b471d25e27d66b65de6f7d86ac350a8b2181",
+    "docs/requirements.md": "cb69aebdbecc462b7ca7f27a8f37fcd3307ac4f87e9621e5b6588dae7264acab",
+    "docs/setup.md": "fd771e75162d3528c2752af41e0cc444c7b6678073f1fbeb68892da02b656f0f",
+    "docs/threat-model.md": "4cf63b36a402d2d6412936d1f54edd94160c361cad8c25a59ec5410bb7bbaeaa",
+    "migrations/001_foundation.sql": "4cdd0ad83bd46abe2c6761415594325916929d3aebcfe2249ba607727422fa1f",
+    "pyproject.toml": "40767c8838b3baf77274cf253f2ff299b588139fc6adc51f89fe901d8702ab87",
+    "requirements-dev.lock": "128355cb324e28af86a6e2826fa007404aeb3e492aeed88bec42951dc474d9bf",
+    "requirements.lock": "e80a7523e3c233adfecbb326aeff03a316949f02a1271f93ee3517d26c003f63",
+    "scripts/demo_auth.py": "5ce7f955d844a75930330ed297c4de9e41c7ee470c690967ee0f34f9503ccf61",
+    "scripts/record_foundation.py": "fd108fc08646a7ed48618de226bac7dbf7119eb5e50fce2e08f23b230c43457b",
+    "scripts/verify_foundation.py": "c21a1183bdaef4abd4bef83b8acb6fa3d296188ccf7fa81a92c0a329322e741e",
+    "src/bola_lab/__init__.py": "88c538c9fd92a3737bab75265e2df2c051a97e744af82b1892b9c54f57ea8074",
+    "src/bola_lab/auth.py": "59dbae6fa21c0f05a853d1cf5ee4fd6d98253d13b556b730b775ba3a1c2aed86",
+    "src/bola_lab/cli.py": "a082a5f707ca635187d72b7a9e2c84285d0c5caa1165272cb358e39402031925",
+    "src/bola_lab/config.py": "e4cc8ebaffc74ce5e74bc5f9abfbfb2979618ef7a9ec609879eff1c1d548973a",
+    "src/bola_lab/db.py": "acb60353af459cae229f6a4938c9a2511222a5537afa983b36232f9c65f4373e",
+    "src/bola_lab/main.py": "c5b1857ce48e543daedd1f9259a6fa665acc01c3177b8d37bc2589d1e4b9b61e",
+    "src/bola_lab/migrations.py": "5720830a1b5e61b2c6abc266b36d7b086ed213ad7ac0514c8e60ac9e2309d6be",
+    "src/bola_lab/schemas.py": "54dd515bb797b93cde773db47157c6033801d0ec2fd6b51283adb86d8a6920a3",
+    "src/bola_lab/seed.py": "8b9e5abee1a66c1dbecd00ceab316bb06dcb09a85c3007d59e4208c15eab9bde",
+    "tests/conftest.py": "ee00142ff8f3dfb8e5ee6e843cbbbaf77d04fb1497ab640bc0ac2cb1e8291dd2",
+    "tests/test_auth.py": "7ac6e30bdba4b91f5c87cc3ef81e3c359f1cc8c966b862a41fbdeab03372a8dd",
+    "tests/test_database.py": "20c776d1d0e661aef1304635aff8509a0c6bf9d530dff0cbae33ebfa8ceba803",
+    "tests/test_safety.py": "322edbf63630f815de5bc07e36db3acaf47fc3a75b62b10f6a1b476de5bda6a6"
+  },
+  "tested_image_source_matches_checkout": true,
+  "tested_image": {
+    "files": {
+      "pyproject.toml": "40767c8838b3baf77274cf253f2ff299b588139fc6adc51f89fe901d8702ab87",
+      "requirements.lock": "e80a7523e3c233adfecbb326aeff03a316949f02a1271f93ee3517d26c003f63",
+      "requirements-dev.lock": "128355cb324e28af86a6e2826fa007404aeb3e492aeed88bec42951dc474d9bf",
+      "compose.yaml": "68e2d8d05e10a24410e4df01680feb68a8c14981d11d91e16261cdbf0b0ae76c",
+      ".github/workflows/ci.yml": "6ff4a60162f1b87d4a84befc327a644161d1ae1673db2a74b6ad9d3b2cd34f25",
+      "src/bola_lab/auth.py": "59dbae6fa21c0f05a853d1cf5ee4fd6d98253d13b556b730b775ba3a1c2aed86",
+      "src/bola_lab/migrations.py": "5720830a1b5e61b2c6abc266b36d7b086ed213ad7ac0514c8e60ac9e2309d6be",
+      "src/bola_lab/config.py": "e4cc8ebaffc74ce5e74bc5f9abfbfb2979618ef7a9ec609879eff1c1d548973a",
+      "src/bola_lab/cli.py": "a082a5f707ca635187d72b7a9e2c84285d0c5caa1165272cb358e39402031925",
+      "src/bola_lab/seed.py": "8b9e5abee1a66c1dbecd00ceab316bb06dcb09a85c3007d59e4208c15eab9bde",
+      "src/bola_lab/db.py": "acb60353af459cae229f6a4938c9a2511222a5537afa983b36232f9c65f4373e",
+      "src/bola_lab/__init__.py": "88c538c9fd92a3737bab75265e2df2c051a97e744af82b1892b9c54f57ea8074",
+      "src/bola_lab/schemas.py": "54dd515bb797b93cde773db47157c6033801d0ec2fd6b51283adb86d8a6920a3",
+      "src/bola_lab/main.py": "c5b1857ce48e543daedd1f9259a6fa665acc01c3177b8d37bc2589d1e4b9b61e",
+      "tests/test_auth.py": "7ac6e30bdba4b91f5c87cc3ef81e3c359f1cc8c966b862a41fbdeab03372a8dd",
+      "tests/test_safety.py": "322edbf63630f815de5bc07e36db3acaf47fc3a75b62b10f6a1b476de5bda6a6",
+      "tests/test_database.py": "20c776d1d0e661aef1304635aff8509a0c6bf9d530dff0cbae33ebfa8ceba803",
+      "tests/conftest.py": "ee00142ff8f3dfb8e5ee6e843cbbbaf77d04fb1497ab640bc0ac2cb1e8291dd2",
+      "migrations/001_foundation.sql": "4cdd0ad83bd46abe2c6761415594325916929d3aebcfe2249ba607727422fa1f"
+    },
+    "python": "3.12.12",
+    "packages": {
+      "fastapi": "0.163.0",
+      "pydantic": "2.14.3",
+      "psycopg": "3.3.9",
+      "argon2-cffi": "25.1.0",
+      "pytest": "9.2.0",
+      "httpx": "0.28.1"
+    }
+  },
+  "junit_sha256": "66b5b4e6f5088ccaa91a8dc84c7edd22954d7be8a4757cb6f85c622771ab9432",
+  "test_counts": {
+    "tests": 58,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 58
+  },
+  "verification_complete": true,
+  "images": {
+    "bola-security-lab-api": "sha256:16290a798eab31c97b610f496bec4c6ff0f4cc202853e4ce5e3e641f88898ccc",
+    "bola-security-lab-test": "sha256:9b8c6ef57bb33ee8cf22f87e995d2d6de2e16ab1878a9defe1e36f3aa8ff556a",
+    "postgres:17.7-bookworm": "sha256:52d5e34fcf5c882a859c1269963b35bdc7dcc2814ef0a0de6b8b408b2eb09db1"
+  },
+  "postgres_version": "17.7 (Debian 17.7-3.pgdg12+1)",
+  "api_port_bindings": {
+    "8000/tcp": [
+      {
+        "HostIp": "127.0.0.1",
+        "HostPort": "8000"
+      }
+    ]
+  },
+  "database_port_bindings": {},
+  "configured_authorization_mode": "hardened",
+  "experiment_metrics": null,
+  "limitations": [
+    "Hosted GitHub Actions has not executed this uncommitted work.",
+    "Normal Docker build failed cloud-proxy certificate validation; verified via temporary CA-secret adaptation.",
+    "Host-shell published-port curl failed; live HTTP demo verified inside API container.",
+    "Starlette reports HTTPX TestClient deprecation; HTTPX requirement retained.",
+    "Resource authorization, seeded flaws, experimental metrics and concurrency testing deferred."
+  ]
+}

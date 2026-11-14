@@ -1,0 +1,73 @@
+name: bola-security-lab
+
+x-app: &app
+  build: .
+  environment: &app-env
+    BOLA_DATABASE_URL: postgresql://bola_lab:synthetic-local-only@db:5432/bola_lab
+    BOLA_ENVIRONMENT: lab
+    BOLA_LAB_OPT_IN: "${BOLA_LAB_OPT_IN:-false}"
+    BOLA_AUTHORIZATION_MODE: "${BOLA_AUTHORIZATION_MODE:-hardened}"
+    BOLA_BIND_HOST: 0.0.0.0
+    BOLA_PUBLISH_HOST: 127.0.0.1
+  networks: [lab]
+  read_only: true
+  tmpfs: [/tmp]
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  depends_on:
+    db:
+      condition: service_healthy
+
+services:
+  db:
+    image: postgres:17.7-bookworm
+    environment:
+      POSTGRES_DB: bola_lab
+      POSTGRES_USER: bola_lab
+      POSTGRES_PASSWORD: synthetic-local-only
+    volumes: [pgdata:/var/lib/postgresql/data]
+    networks: [lab]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U bola_lab -d bola_lab"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    # No published database port. Credentials are synthetic, local lab values only.
+
+  migrate:
+    <<: *app
+    command: [bola-lab, migrate]
+
+  api:
+    <<: *app
+    command: [bola-lab, serve]
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/ready', timeout=2)"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  test:
+    <<: *app
+    profiles: [test]
+    build:
+      context: .
+      target: test
+    environment:
+      <<: *app-env
+      BOLA_TEST_DATABASE_URL: postgresql://bola_lab:synthetic-local-only@db:5432/bola_lab_test
+    command: [pytest, -p, "no:cacheprovider"]
+
+networks:
+  lab:
+    internal: true
+
+volumes:
+  pgdata:
