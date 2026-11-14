@@ -1,0 +1,1 @@
+{"ready": {"status": "ready"}, "identity": {"id": 1, "email": "owner@alpha.example"}, "logout_status": 204, "revoked_token_status": 401, "result": "passed"}
