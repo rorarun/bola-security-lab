@@ -1,7 +1,7 @@
 # Approved permission matrix
 
-Normative policy for future resource endpoints. M1 implements authentication and database integrity,
-not resource authorization. Roles apply per project, with no implicit organization administrator.
+Normative policy implemented by M2 endpoint-specific authorization. Roles apply per project,
+with no implicit organization administrator. Baseline and centralized comparisons are deferred.
 
 | Action | Owner | Editor | Viewer | Same-org nonmember | Cross-org outsider |
 |---|---|---|---|---|---|

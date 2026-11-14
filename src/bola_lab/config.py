@@ -32,10 +32,12 @@ class Settings(BaseModel):
                 raise ValueError(
                     "non-hardened modes require environment=lab and explicit lab_opt_in"
                 )
-            if self.bind_host not in {"127.0.0.1", "::1"}:
-                raise ValueError("non-hardened modes require a loopback bind")
-            # M1 has no authorization experiments: even a valid opt-in cannot activate one.
-            raise ValueError("non-hardened configurations are not implemented in M1")
+            if self.authorization_mode == "baseline":
+                if self.bind_host not in {"127.0.0.1", "::1"}:
+                    raise ValueError("baseline requires a loopback bind")
+                raise ValueError("baseline is unavailable in M2")
+            # Endpoint mode is defensive. Docker may bind internally to 0.0.0.0;
+            # the shipped host publication is still literal loopback.
         return self
 
     @classmethod

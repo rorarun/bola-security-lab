@@ -5,10 +5,13 @@
 COMP 3123 — Computer Security, Fall 2026. Submission: November 24, 2026.
 
 This is a synthetic, local research laboratory, not a general-purpose scanner.
-**Current milestone: M1 foundation only.** Authentication, schema, seed data, safeguards, tests and
-initial CI are implemented. Project/task endpoints and the three experimental authorization
-implementations are deferred. The `hardened` default is a reserved configuration name, not a claim
-that the future task API has already been implemented or evaluated.
+**Current milestone: M2 functional API.** Authentication, organizations, projects, memberships and
+task CRUD are implemented with endpoint-specific authorization. Owner/editor/viewer permissions,
+current membership, tenant boundaries and parent relationships are checked server-side.
+The safe `hardened` default currently selects this defensive endpoint-specific implementation;
+it does not claim centralized enforcement. Explicit `endpoint` mode requires lab environment and
+opt-in. The vulnerable baseline remains unavailable; centralized authorization and the full
+three-configuration experiment remain deferred.
 
 ## Local setup
 
@@ -28,8 +31,9 @@ public tunnels, host networking, or public port mappings. Seed refuses a populat
 `bola-lab seed --reset` explicitly destroys and replaces lab records and sessions.
 
 Interactive API documentation: <http://127.0.0.1:8000/docs>.
-See [setup and fixtures](docs/setup.md), [authentication demonstration](docs/demonstration.md), and
-[actual verification results](docs/m1-verification.md). The cloud build required a temporary CA
+See [setup and fixtures](docs/setup.md), [API contract](docs/api.md),
+[collaboration demonstration](docs/demonstration.md), and [M2 verification](docs/m2-verification.md).
+The cloud build required a temporary CA
 secret adaptation documented there; normal Docker trust settings remain unchanged.
 
 ## Tests
@@ -39,12 +43,15 @@ docker compose up -d --wait db
 docker compose exec -T db createdb -U bola_lab bola_lab_test
 docker compose --profile test build test
 docker compose --profile test run --rm test
+python3 scripts/verify_api.py
 ```
 
 Create the disposable test database once; `createdb` errors if it already exists. Tests erase its
 application tables, not the normal `bola_lab` database. Integration fixtures require an explicit local
 `BOLA_TEST_DATABASE_URL` and database name ending in `_test`. Without that variable, integration
-checks explicitly skip; this is not full verification. CI supplies PostgreSQL and runs lint and tests.
+checks explicitly skip; this is not full verification. `verify_api.py` runs the current suite
+and preserves JUnit in `results/m2/`. CI supplies PostgreSQL and runs lint and tests.
+Historical M1 evidence remains in `results/m1/` and the `feature/m1-foundation` branch.
 
 Stop with `docker compose down` (retains data). `docker compose down -v` also deletes the lab volume.
 
@@ -58,7 +65,7 @@ Stop with `docker compose down` (retains data). `docker compose down -v` also de
 - [Evidence status](results/README.md)
 
 Only synthetic records and local targets are permitted. A private repository does not make a
-vulnerable service safe. M1 rejects non-hardened configurations even with laboratory opt-in.
+vulnerable service safe. M2 rejects baseline startup even with laboratory opt-in.
 No public deployment workflow is included.
 
 The final academic report must be at least eight pages; the recording must be no longer than ten

@@ -3,6 +3,7 @@ import argparse
 import uvicorn
 
 from bola_lab.config import Settings
+from bola_lab.local_admin import add_organization_member
 from bola_lab.migrations import migrate
 from bola_lab.seed import seed
 
@@ -18,6 +19,11 @@ def main() -> None:
         "--reset", action="store_true", help="DESTROY and replace existing lab data"
     )
     commands.add_parser("serve", help="Start only after verifying settings and schema")
+    provision = commands.add_parser(
+        "organization-member", help="Provision a synthetic lab member locally"
+    )
+    provision.add_argument("--organization-id", type=int, required=True)
+    provision.add_argument("--user-id", type=int, required=True)
     args = parser.parse_args()
     settings = Settings.from_env()
     if args.command == "migrate":
@@ -26,6 +32,9 @@ def main() -> None:
     elif args.command == "seed":
         seed(settings, reset=args.reset)
         print("Synthetic fixture loaded.")
+    elif args.command == "organization-member":
+        add_organization_member(settings, args.organization_id, args.user_id)
+        print("Synthetic organization membership added.")
     else:
         from bola_lab.main import create_app
 

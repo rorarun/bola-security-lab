@@ -1,5 +1,10 @@
 # M1 foundation verification
 
+Historical snapshot: reproduce from `feature/m1-foundation` at
+`7047806e2e60e33efa8222eb6aeb6ffdc8f3be99`. The current M2 checkout intentionally differs from
+the M1 source hashes. M1 evidence is preserved; current verification writes to `results/m2/`.
+M1 was revalidated with 58 passing tests before preservation and its push-triggered CI succeeded.
+
 This records local verification only. No task authorization implementation or BOLA experiment has
 been executed. `results/m1/junit.xml` and `results/m1/manifest.json` preserve actual test cases,
 counts, source checksums, image IDs, PostgreSQL version and environment limitations.

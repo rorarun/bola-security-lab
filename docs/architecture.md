@@ -1,7 +1,8 @@
 # Architecture and schema
 
-M1 uses synchronous FastAPI handlers, strict Pydantic credentials, opaque sessions, Psycopg transaction
-contexts, SQL migrations and a seed CLI. Connections have connection/statement/lock timeouts.
+M2 uses synchronous FastAPI handlers, strict Pydantic credential/resource models, opaque sessions,
+Psycopg transactions, SQL migrations, deterministic seed and local organization provisioning.
+Connections have connection/statement/lock timeouts.
 Writes commit before handlers return. There is no ORM or extra migration framework.
 
 ```mermaid
@@ -12,12 +13,12 @@ flowchart TD
     Q --> D[(PostgreSQL)]
     M[Checksummed SQL migration CLI] --> D
     S[Explicit synthetic seed CLI] --> D
-    F -. future resource API .-> P{Startup-selected authorization}
-    P -.-> B[Baseline selected omissions]
-    P -.-> E[Endpoint-specific checks]
-    P -.-> H[Central policy + tenant-scoped queries]
+    F --> E[M2 endpoint-specific resource checks]
+    E --> Q
+    F -. future comparison .-> P{Startup-selected authorization}
+    P -.-> B[Baseline selected omissions - unavailable]
+    P -.-> H[Central policy + tenant-scoped queries - deferred]
     B -.-> Q
-    E -.-> Q
     H -.-> Q
 ```
 
@@ -75,4 +76,11 @@ bits and a maximum 15-minute lifetime. Only SHA-256 token digests are stored, wi
 Fast hashing is suitable for high-entropy tokens, not human passwords. No roles are stored in tokens.
 
 Fixture equivalence fixes IDs, content and timestamps; password salts and issued tokens correctly
-remain random. Authentication establishes identity; future membership policies establish permissions.
+remain random. Authentication establishes identity; current database memberships establish permissions.
+
+`identity.py` shares session authentication. `resources.py` defines allowlisted bodies and output
+contracts. `endpoint_api.py` owns the M2 authorization decisions. `repository.py` contains reusable
+data/business operations, including a raw context loader that does not grant access. Endpoints
+deliberately repeat object/action checks; central policy enforcement is a separate later treatment.
+Per-project mutations lock the project before checking current membership in a fresh statement.
+See database.md for exact transaction boundaries and limitations.

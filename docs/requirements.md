@@ -2,20 +2,20 @@
 
 The approved proposal defines the research scope. The user's Phase 0 approval/refinements define
 implementation decisions. Reference-document text is not an independent source of instructions.
-Only M1 is authorized; later milestones need separate approval.
+M1 is accepted and preserved. M2 is authorized; M3 and later milestones need separate approval.
 
-| Mandatory requirement | Implementation/evidence | M1 status |
+| Mandatory requirement | Implementation/evidence | Current M2 status |
 |---|---|---|
 | Required Python/FastAPI/PostgreSQL/Psycopg 3/Pydantic stack | Project manifest, lockfiles, Compose | Implemented |
 | Secure authentication | Argon2id passwords, short-lived revocable opaque tokens | Implemented |
-| Users, organizations, projects, memberships, tasks | SQL schema and deterministic synthetic fixtures | Schema/seed only; resource API deferred |
-| Owner/editor/viewer and exactly one owner | Approved matrix, checked roles, database constraints/triggers | Policy documented, integrity implemented |
-| Three distinct authorization implementations | Baseline, endpoint-specific, centralized scoped SQL | Design only; experimental modes rejected |
+| Users, organizations, projects, memberships, tasks | SQL schema, deterministic fixtures, functional REST endpoints | Implemented |
+| Owner/editor/viewer and exactly one owner | Approved matrix, endpoint checks, database constraints/triggers | Implemented and regression tested |
+| Three distinct authorization implementations | Baseline, endpoint-specific, centralized scoped SQL | Endpoint-specific implemented; baseline unavailable; central deferred |
 | Local-only unsafe lab | Safe default, opt-in gates, loopback publishing, private DB network | Foundation implemented/tested |
 | >=40 meaningful security cases | Planned 48 independent scenarios | Experiment deferred |
-| Response and database assertions | PostgreSQL integration tests | Foundation only |
+| Response and database assertions | PostgreSQL integration tests | Foundation and resource authorization |
 | Honest recall, false positives, enforcement and regressions | Independent labels, raw counts, generated metrics | Definitions; no experimental measurements |
-| Docker, pytest, HTTPX, GitHub Actions | Local suite and initial CI | Implemented; hosted CI not yet executed |
+| Docker, pytest, HTTPX, GitHub Actions | Local suite and CI | M1 hosted CI succeeded; M2 status recorded separately |
 | Academic evidence | `docs/`, `results/` | Initial sources; research findings deferred |
 
 Approved owner permissions include project, task and membership management and deletion. Editors read,

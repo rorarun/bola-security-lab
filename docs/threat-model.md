@@ -7,11 +7,11 @@ changes. The attacker cannot change deployment settings or access database crede
 | Threat | Defense/status |
 |---|---|
 | Stolen/forged or expired identity | M1 Argon2id, random tokens, digest lookup, expiry/revocation |
-| Same-org or cross-org object access | Future membership/action policies and scoped SQL |
-| Parent/child mismatch | M1 composite FKs; future complete-path queries |
-| List disclosure | Future database filtering with exact-content assertions |
-| Membership revocation | Future live membership checks rather than role claims |
-| Accidental vulnerable startup | Hardened default, opt-in gates; M1 rejects experimental modes |
+| Same-org or cross-org object access | M2 explicit endpoint membership/action checks; central scoped access deferred |
+| Parent/child mismatch | Composite FKs and explicit complete-path endpoint checks |
+| List disclosure | M2 endpoint-local SQL filters with exact-content assertions |
+| Membership revocation | M2 current membership checks rather than token role claims |
+| Accidental vulnerable startup | Hardened default, opt-in gates; baseline always rejected in M2 |
 | Accidental exposure | Literal loopback API mapping, no DB host port, internal network |
 | Credential response leakage | Strict output schemas, redacted validation, no-store, no access logs |
 | Destructive test reset | Explicit local `_test` database; no fallback to application DB |

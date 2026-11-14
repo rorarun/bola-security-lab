@@ -1,5 +1,25 @@
 # M1 authentication demonstration
 
+## M2 role-based collaboration (current milestone)
+
+Start the current API and load the synthetic seed as in the README, then run:
+
+```sh
+docker compose exec -T api python - < scripts/demo_collaboration.py
+```
+
+The script performs real local HTTP calls for owner-created project, owner-managed editor/viewer
+memberships, editor-created/updated task, viewer read, denied viewer update and editor delete,
+denied outsiders, a verified parent mismatch, exact task listing, revocation with the same session,
+and owner deletion. It deletes its temporary project and revokes its sessions afterward. Prerequisite:
+unmodified fixture users and task 1 under project 1. It never resets unrelated data.
+Its JSON output records methods, resource paths, synthetic bodies, statuses and responses; credentials
+and bearer headers are omitted. Capture that output for the academic report. Only label it verified
+after a successful run; actual M2 output is in `results/m2/demo.json`.
+
+The remaining authentication instructions also remain useful, but statements below about deferred
+BOLA demonstrations refer to deliberate exploit demonstrations, which are still outside M2.
+
 Prerequisite: API ready and synthetic seed loaded using README commands. These commands exercise
 authentication only. BOLA demonstrations are deferred until explicit approval for later milestones.
 Never record bearer tokens or passwords in screenshots of real accounts.

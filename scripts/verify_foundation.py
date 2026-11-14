@@ -7,6 +7,11 @@ from pathlib import Path
 
 
 def main():
+    if Path("src/bola_lab/endpoint_api.py").exists():
+        raise SystemExit(
+            "M1 evidence is frozen. Checkout feature/m1-foundation for M1, "
+            "or run scripts/verify_api.py for M2."
+        )
     result = subprocess.run(
         [
             "docker",

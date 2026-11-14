@@ -49,3 +49,31 @@ def seeded_database(empty_database):
 def client(empty_database):
     with TestClient(create_app(empty_database)) as client:
         yield client
+
+
+@pytest.fixture
+def resource_client(seeded_database):
+    with TestClient(create_app(seeded_database)) as client:
+        yield client
+
+
+@pytest.fixture
+def actor(resource_client):
+    from bola_lab.seed import SEED_PASSWORD, USERS
+
+    tokens = {}
+
+    def headers(user_id):
+        if user_id not in tokens:
+            response = resource_client.post(
+                "/auth/token",
+                json={
+                    "email": dict(USERS)[user_id],
+                    "password": SEED_PASSWORD,
+                },
+            )
+            assert response.status_code == 200
+            tokens[user_id] = response.json()["access_token"]
+        return {"Authorization": f"Bearer {tokens[user_id]}"}
+
+    return headers
