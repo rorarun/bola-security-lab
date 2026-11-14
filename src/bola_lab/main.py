@@ -4,12 +4,10 @@ from typing import Annotated
 from fastapi import Depends, FastAPI, HTTPException, Request, Response, status
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
-from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from psycopg.errors import UniqueViolation
 
 from bola_lab.auth import (
     HASHER,
-    TOKEN_PATTERN,
     hash_password,
     new_token,
     token_digest,
@@ -17,34 +15,10 @@ from bola_lab.auth import (
 )
 from bola_lab.config import Settings
 from bola_lab.db import connect
+from bola_lab.endpoint_api import router as resource_router
+from bola_lab.identity import authenticated_user, unauthorized
 from bola_lab.migrations import verify_schema
 from bola_lab.schemas import Credentials, TokenResponse, UserResponse
-
-BEARER = HTTPBearer(auto_error=False)
-
-
-def unauthorized() -> HTTPException:
-    return HTTPException(
-        status_code=401, detail="Invalid credentials", headers={"WWW-Authenticate": "Bearer"}
-    )
-
-
-def authenticated_user(
-    request: Request,
-    credentials: Annotated[HTTPAuthorizationCredentials | None, Depends(BEARER)],
-) -> dict:
-    if credentials is None or not TOKEN_PATTERN.fullmatch(credentials.credentials):
-        raise unauthorized()
-    digest = token_digest(credentials.credentials)
-    with connect(request.app.state.settings) as conn:
-        user = conn.execute(
-            """SELECT u.id, u.email FROM auth_sessions s JOIN users u ON u.id = s.user_id
-               WHERE s.token_digest = %s AND s.revoked_at IS NULL AND s.expires_at > now()""",
-            (digest,),
-        ).fetchone()
-    if user is None:
-        raise unauthorized()
-    return {**user, "token_digest": digest}
 
 
 def create_app(settings: Settings | None = None) -> FastAPI:
@@ -143,4 +117,6 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             )
         return Response(status_code=204)
 
+    app.state.authorization_implementation = "endpoint-specific"
+    app.include_router(resource_router)
     return app

@@ -34,10 +34,23 @@ def test_unsafe_configuration_requires_lab_and_opt_in(mode, environment, opt_in)
         )
 
 
-@pytest.mark.parametrize("mode", ["baseline", "endpoint"])
-def test_m1_rejects_even_opted_in_experiments(mode):
-    with pytest.raises(ValidationError, match="not implemented in M1"):
-        Settings(database_url=URL, authorization_mode=mode, environment="lab", lab_opt_in=True)
+def test_m2_rejects_baseline_even_with_opt_in():
+    with pytest.raises(ValidationError, match="baseline is unavailable in M2"):
+        Settings(
+            database_url=URL, authorization_mode="baseline", environment="lab", lab_opt_in=True
+        )
+
+
+def test_explicit_defensive_endpoint_mode_requires_and_accepts_lab_opt_in():
+    settings = Settings(
+        database_url=URL,
+        authorization_mode="endpoint",
+        environment="lab",
+        lab_opt_in=True,
+        bind_host="0.0.0.0",
+    )
+    assert settings.authorization_mode == "endpoint"
+    assert settings.publish_host == "127.0.0.1"
 
 
 def test_unsafe_wildcard_bind_rejected():

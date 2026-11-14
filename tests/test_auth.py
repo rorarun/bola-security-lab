@@ -132,9 +132,10 @@ def test_invalid_registration_rejected_without_echoing_password(client, empty_da
         assert conn.execute("SELECT count(*) AS n FROM users").fetchone()["n"] == 0
 
 
-def test_health_and_only_m1_endpoints(client):
+def test_health_auth_contract_and_protected_resource_routes(client):
     assert client.get("/health/live").json() == {"status": "ok"}
     assert client.get("/health/ready").json() == {"status": "ready"}
     paths = set(client.get("/openapi.json").json()["paths"])
-    assert paths == {"/health/live", "/health/ready", "/auth/register", "/auth/token", "/users/me"}
-    assert client.get("/organizations/1/projects/1/tasks/1").status_code == 404
+    assert {"/health/live", "/health/ready", "/auth/register", "/auth/token", "/users/me"} <= paths
+    assert "/organizations/{org_id}/projects/{project_id}/tasks/{task_id}" in paths
+    assert client.get("/organizations/1/projects/1/tasks/1").status_code == 401

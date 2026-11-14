@@ -1,4 +1,4 @@
-name: Foundation checks
+name: API and safety checks
 on: [push, pull_request]
 permissions:
   contents: read
@@ -31,9 +31,9 @@ jobs:
       - run: ruff check .
       - run: ruff format --check .
       - run: docker compose config --quiet
-      - run: pytest --junitxml=results/m1-junit.xml
+      - run: pytest --junitxml=results/m2-junit.xml
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: m1-foundation-checks
-          path: results/m1-junit.xml
+          name: m2-api-checks
+          path: results/m2-junit.xml

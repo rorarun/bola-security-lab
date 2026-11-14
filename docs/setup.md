@@ -22,7 +22,10 @@ CLI: `bola-lab migrate`, `bola-lab seed [--reset]`, `bola-lab serve`.
 Default environment is `production`, mode `hardened`, bind/publish host loopback and token TTL 900s.
 Seeding requires `BOLA_ENVIRONMENT=lab` and `BOLA_LAB_OPT_IN=true` together. Compose sets lab environment
 but defaults opt-in false. `.env.example` is for Compose interpolation; Python does not auto-load `.env`.
-M1 always rejects `baseline` and `endpoint` modes, including valid local opt-in.
+M2 always rejects `baseline`, including valid local opt-in. `endpoint` is now implemented defensively
+and requires lab environment and opt-in; its container listener may use the internal wildcard bind.
+The safe `hardened` default currently invokes the same endpoint-specific implementation. It does not
+claim centralized authorization, which is deferred. No request can select a mode.
 
 ## Fixture version 1
 
@@ -44,7 +47,7 @@ Task IDs 1/2/3 belong respectively to projects 1/2/3. Each starts with status `t
 Identity sequences advance past fixture IDs. No fixture implies that revocation behavior is already
 implemented or evaluated through resource endpoints.
 
-## Cloud proxy build workaround used for M1
+## Cloud proxy build workaround
 
 The standard Docker build failed certificate verification inside the base image in this managed
 environment. TLS was not disabled. An ephemeral Dockerfile added a CA secret mount to pip steps:
