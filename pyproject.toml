@@ -24,6 +24,9 @@ bola-lab = "bola_lab.cli:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+"bola_lab.evaluation" = ["*.json", "*.sha256"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-ra --strict-markers"
