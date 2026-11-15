@@ -1,5 +1,5 @@
 {
-  "inventory_version": "m3a-1",
+  "inventory_version": "m3a-2",
   "scenarios": [
     {
       "actor_id": 1,
@@ -1576,14 +1576,14 @@
           {
             "organization_id": 1,
             "project_id": 1,
-            "role": "editor",
-            "user_id": 2
+            "role": "owner",
+            "user_id": 1
           },
           {
             "organization_id": 1,
             "project_id": 1,
-            "role": "owner",
-            "user_id": 1
+            "role": "editor",
+            "user_id": 2
           },
           {
             "organization_id": 1,

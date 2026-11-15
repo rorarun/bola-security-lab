@@ -1,6 +1,6 @@
 # Frozen M3-A scenario inventory
 
-Version m3a-1. Literal expectations are in `src/bola_lab/evaluation/inventory.json`.
+Version m3a-2 (see amendments.md for the preserved E5 ordering correction). Literal expectations are in `src/bola_lab/evaluation/inventory.json`.
 Changing outcomes requires an explicit versioned research amendment, never an observed-result rewrite.
 
 | ID | Scenario | Actor | Category | Permission | Status | Defect classes |

@@ -1,0 +1,842 @@
+[
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "not_applicable"
+    },
+    "enforcement": "not_applicable",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "H1",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "not_applicable"
+    },
+    "enforcement": "not_applicable",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "H2",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "not_applicable"
+    },
+    "enforcement": "not_applicable",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "H3",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "not_applicable"
+    },
+    "enforcement": "not_applicable",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "H4",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "not_applicable"
+    },
+    "enforcement": "not_applicable",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "H5",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "not_applicable"
+    },
+    "enforcement": "not_applicable",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "H6",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "C1",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "C2",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "C3",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "C4",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "C5",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "C6",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "A1",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "A2",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "A3",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "A4",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "A5",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "A6",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "N1",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "N2",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "N3",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "N4",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "N5",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "N6",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "X1",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "X2",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "X3",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "X4",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "X5",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "X6",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "L1",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "L2",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "L3",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "L4",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "L5",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "L6",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "I1",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "I2",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "I3",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "I4",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "not_applicable"
+    },
+    "enforcement": "not_applicable",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "I5",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "not_applicable"
+    },
+    "enforcement": "not_applicable",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "I6",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "R1",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "R2",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "R3",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "R4",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "R5",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "R6",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "E1",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "E2",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "E3",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "E4",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": false,
+    "response_contract_pass": false,
+    "scenario_id": "E5",
+    "session_contract_pass": true,
+    "status": "failed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "not_applicable"
+    },
+    "enforcement": "not_applicable",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "E6",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "E7",
+    "session_contract_pass": true,
+    "status": "passed"
+  },
+  {
+    "database_contract_pass": true,
+    "detector": {
+      "classes": [],
+      "evidence": [],
+      "verdict": "no_finding"
+    },
+    "enforcement": "compliant",
+    "execution_errors": [],
+    "functional_pass": true,
+    "response_contract_pass": true,
+    "scenario_id": "E8",
+    "session_contract_pass": true,
+    "status": "passed"
+  }
+]
