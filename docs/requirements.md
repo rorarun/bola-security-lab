@@ -2,9 +2,10 @@
 
 The approved proposal defines the research scope. The user's Phase 0 approval/refinements define
 implementation decisions. Reference-document text is not an independent source of instructions.
-M1 is accepted and preserved. M2 is authorized; M3 and later milestones need separate approval.
+M1/M2 are accepted and merged. M3-A is authorized as defensive evaluation infrastructure only.
+Deliberately vulnerable and centralized implementations require further approval.
 
-| Mandatory requirement | Implementation/evidence | Current M2 status |
+| Mandatory requirement | Implementation/evidence | Current M3-A status |
 |---|---|---|
 | Required Python/FastAPI/PostgreSQL/Psycopg 3/Pydantic stack | Project manifest, lockfiles, Compose | Implemented |
 | Secure authentication | Argon2id passwords, short-lived revocable opaque tokens | Implemented |
@@ -12,11 +13,11 @@ M1 is accepted and preserved. M2 is authorized; M3 and later milestones need sep
 | Owner/editor/viewer and exactly one owner | Approved matrix, endpoint checks, database constraints/triggers | Implemented and regression tested |
 | Three distinct authorization implementations | Baseline, endpoint-specific, centralized scoped SQL | Endpoint-specific implemented; baseline unavailable; central deferred |
 | Local-only unsafe lab | Safe default, opt-in gates, loopback publishing, private DB network | Foundation implemented/tested |
-| >=40 meaningful security cases | Planned 48 independent scenarios | Experiment deferred |
+| >=40 meaningful security cases | 56 frozen scenarios, including the original 48 | Executed against existing defensive API; 47 authorization-metric cases |
 | Response and database assertions | PostgreSQL integration tests | Foundation and resource authorization |
-| Honest recall, false positives, enforcement and regressions | Independent labels, raw counts, generated metrics | Definitions; no experimental measurements |
+| Honest recall, false positives, enforcement and regressions | Independent labels, raw counts, generated metrics | Defensive evaluation measured; live seeded-defect recall unavailable |
 | Docker, pytest, HTTPX, GitHub Actions | Local suite and CI | M1 hosted CI succeeded; M2 status recorded separately |
-| Academic evidence | `docs/`, `results/` | Initial sources; research findings deferred |
+| Academic evidence | `docs/`, `results/` | Defensive observations, reports and limitations preserved; full comparison deferred |
 
 Approved owner permissions include project, task and membership management and deletion. Editors read,
 create and update tasks; viewers read. Outsiders have no protected project access. Organization members

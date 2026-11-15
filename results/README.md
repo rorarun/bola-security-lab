@@ -1,5 +1,10 @@
 # Evidence status
 
+M3-A evidence is under `m3a/`: `runs/initial-v1/` preserves the original 55/56 oracle-ordering failure;
+`runs/defensive-v2/` contains the final 56/56 live HTTP run. `regression/` contains the 241-test
+regression/framework JUnit and provenance. See `docs/evaluation/verification.md` for definitions
+and limitations. No live seeded-defect recall or three-configuration comparison is claimed.
+
 `m1/` is the preserved foundation snapshot from `feature/m1-foundation` (commit 7047806).
 `m2/` holds current functional/authorization regression JUnit, execution status, manifest and sanitized
 live-HTTP requests/responses. Hosted CI status is available in GitHub Actions for exact pushed commits.

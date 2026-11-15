@@ -1,0 +1,2 @@
+# csv.DictWriter uses standard CRLF records; preserve exact replayable artifact bytes.
+*.csv whitespace=cr-at-eol

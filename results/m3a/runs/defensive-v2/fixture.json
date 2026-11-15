@@ -1,0 +1,179 @@
+{
+  "state": {
+    "organization_memberships": [
+      {
+        "organization_id": 1,
+        "user_id": 1
+      },
+      {
+        "organization_id": 1,
+        "user_id": 2
+      },
+      {
+        "organization_id": 1,
+        "user_id": 3
+      },
+      {
+        "organization_id": 1,
+        "user_id": 4
+      },
+      {
+        "organization_id": 1,
+        "user_id": 6
+      },
+      {
+        "organization_id": 1,
+        "user_id": 7
+      },
+      {
+        "organization_id": 2,
+        "user_id": 5
+      }
+    ],
+    "organizations": [
+      {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 1,
+        "id": 1,
+        "name": "Alpha Lab"
+      },
+      {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 5,
+        "id": 2,
+        "name": "Beta Lab"
+      }
+    ],
+    "project_memberships": [
+      {
+        "organization_id": 1,
+        "project_id": 1,
+        "role": "editor",
+        "user_id": 2
+      },
+      {
+        "organization_id": 1,
+        "project_id": 1,
+        "role": "owner",
+        "user_id": 1
+      },
+      {
+        "organization_id": 1,
+        "project_id": 1,
+        "role": "viewer",
+        "user_id": 3
+      },
+      {
+        "organization_id": 1,
+        "project_id": 2,
+        "role": "owner",
+        "user_id": 7
+      },
+      {
+        "organization_id": 2,
+        "project_id": 3,
+        "role": "owner",
+        "user_id": 5
+      }
+    ],
+    "projects": [
+      {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 1,
+        "description": "",
+        "id": 1,
+        "name": "Alpha Collaboration",
+        "organization_id": 1
+      },
+      {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 5,
+        "description": "",
+        "id": 3,
+        "name": "Beta Private Project",
+        "organization_id": 2
+      },
+      {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 7,
+        "description": "",
+        "id": 2,
+        "name": "Alpha Separate Project",
+        "organization_id": 1
+      }
+    ],
+    "tasks": [
+      {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 1,
+        "description": "",
+        "id": 1,
+        "organization_id": 1,
+        "project_id": 1,
+        "status": "todo",
+        "title": "Synthetic task 1",
+        "updated_at": "2026-11-14T12:00:00Z"
+      },
+      {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 5,
+        "description": "",
+        "id": 3,
+        "organization_id": 2,
+        "project_id": 3,
+        "status": "todo",
+        "title": "Synthetic task 3",
+        "updated_at": "2026-11-14T12:00:00Z"
+      },
+      {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 7,
+        "description": "",
+        "id": 2,
+        "organization_id": 1,
+        "project_id": 2,
+        "status": "todo",
+        "title": "Synthetic task 2",
+        "updated_at": "2026-11-14T12:00:00Z"
+      }
+    ],
+    "users": [
+      {
+        "created_at": "2026-11-14T12:00:00Z",
+        "email": "editor@alpha.example",
+        "id": 2
+      },
+      {
+        "created_at": "2026-11-14T12:00:00Z",
+        "email": "outsider@alpha.example",
+        "id": 4
+      },
+      {
+        "created_at": "2026-11-14T12:00:00Z",
+        "email": "owner@alpha.example",
+        "id": 1
+      },
+      {
+        "created_at": "2026-11-14T12:00:00Z",
+        "email": "owner@beta.example",
+        "id": 5
+      },
+      {
+        "created_at": "2026-11-14T12:00:00Z",
+        "email": "removed@alpha.example",
+        "id": 6
+      },
+      {
+        "created_at": "2026-11-14T12:00:00Z",
+        "email": "second-owner@alpha.example",
+        "id": 7
+      },
+      {
+        "created_at": "2026-11-14T12:00:00Z",
+        "email": "viewer@alpha.example",
+        "id": 3
+      }
+    ]
+  },
+  "version": "m3a-fixture-1"
+}

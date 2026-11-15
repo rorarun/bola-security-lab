@@ -1,0 +1,21 @@
+{
+  "case_groups": {
+    "tests.evaluation.test_contracts": 28,
+    "tests.evaluation.test_execution": 3,
+    "tests.evaluation.test_reports": 3,
+    "tests.test_auth": 18,
+    "tests.test_database": 17,
+    "tests.test_resources": 149,
+    "tests.test_safety": 23
+  },
+  "errors": 0,
+  "evidence_kind": "Executed M1/M2 regression and M3-A framework verification",
+  "failures": 0,
+  "junit_sha256": "8adb6d10b1ee99f88f8143cf8c6430460ab525f45e2496d620fdf1c978f0ae00",
+  "passed": 241,
+  "skipped": 0,
+  "source_commit": "7bdccc94155341a6403f8e1690f260683ec75071",
+  "test_image_id": "sha256:143569b484190092aaa6c14b8fe9031295dcdaf1d913cf5d4a6c88324d30895a",
+  "tests": 241,
+  "warning": "Starlette HTTPX TestClient deprecation; not suppressed"
+}

@@ -66,6 +66,7 @@ Stop with `docker compose down` (retains data). `docker compose down -v` also de
 - [Evidence status](results/README.md)
 - [M3-A methodology](docs/evaluation/methodology.md), [frozen scenarios](docs/evaluation/scenarios.md),
   [defect-class mapping](docs/evaluation/defect-inventory.md), and [reproduction](docs/evaluation/reproduction.md)
+- [Actual M3-A verification and evidence](docs/evaluation/verification.md)
 
 M3-A evaluates 56 independently specified scenarios against the existing API using a harness-owned
 loopback HTTP server and `bola_lab_evaluation_test`. It adds no authorization configuration or seeded
