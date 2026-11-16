@@ -1,0 +1,38 @@
+{
+  "all_verified": true,
+  "labels": [
+    {
+      "defect_id": "B01",
+      "observation_sha256": "e3d8dab953fa0f3066ee254f24343fb84a1bc284c3c2a84cf0ba65d489e361ee",
+      "verified_present": true,
+      "witness_scenario": "N2"
+    },
+    {
+      "defect_id": "B02",
+      "observation_sha256": "57a255b333f9564f04652dbb7811b20b1f7e87691f2303550b49e70706f11e19",
+      "verified_present": true,
+      "witness_scenario": "L4"
+    },
+    {
+      "defect_id": "B03",
+      "observation_sha256": "80889449cb957998f0ad03d215e6f5f8bdf37118e957edcfa0bc687bb4c59756",
+      "verified_present": true,
+      "witness_scenario": "N4"
+    },
+    {
+      "defect_id": "B04",
+      "observation_sha256": "8cd0ac57f9ebd59604e595ed88cc2913f0301043cc93526344a290c284ab2ebf",
+      "verified_present": true,
+      "witness_scenario": "N5"
+    },
+    {
+      "defect_id": "B05",
+      "observation_sha256": "2d04fafca8a9411d85d9303105832d2ab3d4215309d03ebacc55389152446e26",
+      "verified_present": true,
+      "witness_scenario": "N3"
+    }
+  ],
+  "method": "literal independent HTTP/state witnesses plus source-labelled omissions",
+  "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+  "source_sha256": "9d6a8d8e83b274cda70a6a1fe9f8e9fd991b9b08bc397aca6645208fcfbaf1c8"
+}

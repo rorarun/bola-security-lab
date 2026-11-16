@@ -1,0 +1,705 @@
+{
+  "expected_violation_ids": [
+    "N2",
+    "X3",
+    "I2",
+    "R5",
+    "E8",
+    "L3",
+    "L4",
+    "L5",
+    "L6",
+    "S1",
+    "S5",
+    "A2",
+    "N4",
+    "X5",
+    "I3",
+    "R4",
+    "R6",
+    "A3",
+    "A4",
+    "N5",
+    "X6",
+    "I4",
+    "A1",
+    "N3",
+    "X4"
+  ],
+  "profiles": {
+    "A1": {
+      "auth_session_delta": 0,
+      "effect": {
+        "kind": "insert",
+        "row": {
+          "created_at": "@runtime",
+          "created_by": 3,
+          "description": "",
+          "id": 4,
+          "organization_id": 1,
+          "project_id": 1,
+          "status": "todo",
+          "title": "Forbidden",
+          "updated_at": "@runtime"
+        },
+        "table": "tasks"
+      },
+      "permission": "deny",
+      "response": {
+        "created_at": "@runtime",
+        "created_by": 3,
+        "description": "",
+        "id": 4,
+        "organization_id": 1,
+        "project_id": 1,
+        "status": "todo",
+        "title": "Forbidden",
+        "updated_at": "@runtime"
+      },
+      "status": 201
+    },
+    "A2": {
+      "auth_session_delta": 0,
+      "effect": {
+        "key": {
+          "id": 1
+        },
+        "kind": "update",
+        "table": "tasks",
+        "values": {
+          "title": "Forbidden",
+          "updated_at": "@runtime"
+        }
+      },
+      "permission": "deny",
+      "response": {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 1,
+        "description": "",
+        "id": 1,
+        "organization_id": 1,
+        "project_id": 1,
+        "status": "todo",
+        "title": "Forbidden",
+        "updated_at": "@runtime"
+      },
+      "status": 200
+    },
+    "A3": {
+      "auth_session_delta": 0,
+      "effect": {
+        "key": {
+          "id": 1
+        },
+        "kind": "delete",
+        "table": "tasks"
+      },
+      "permission": "deny",
+      "response": null,
+      "status": 204
+    },
+    "A4": {
+      "auth_session_delta": 0,
+      "effect": {
+        "key": {
+          "id": 1
+        },
+        "kind": "delete",
+        "table": "tasks"
+      },
+      "permission": "deny",
+      "response": null,
+      "status": 204
+    },
+    "E8": {
+      "auth_session_delta": 0,
+      "effect": {
+        "kind": "none"
+      },
+      "permission": "deny",
+      "response": {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 1,
+        "description": "",
+        "id": 1,
+        "organization_id": 1,
+        "project_id": 1,
+        "status": "todo",
+        "title": "Synthetic task 1",
+        "updated_at": "2026-11-14T12:00:00Z"
+      },
+      "status": 200
+    },
+    "I2": {
+      "auth_session_delta": 0,
+      "effect": {
+        "kind": "none"
+      },
+      "permission": "deny",
+      "response": {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 7,
+        "description": "",
+        "id": 2,
+        "organization_id": 1,
+        "project_id": 2,
+        "status": "todo",
+        "title": "Synthetic task 2",
+        "updated_at": "2026-11-14T12:00:00Z"
+      },
+      "status": 200
+    },
+    "I3": {
+      "auth_session_delta": 0,
+      "effect": {
+        "key": {
+          "id": 2
+        },
+        "kind": "update",
+        "table": "tasks",
+        "values": {
+          "title": "Forbidden",
+          "updated_at": "@runtime"
+        }
+      },
+      "permission": "deny",
+      "response": {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 7,
+        "description": "",
+        "id": 2,
+        "organization_id": 1,
+        "project_id": 2,
+        "status": "todo",
+        "title": "Forbidden",
+        "updated_at": "@runtime"
+      },
+      "status": 200
+    },
+    "I4": {
+      "auth_session_delta": 0,
+      "effect": {
+        "key": {
+          "id": 2
+        },
+        "kind": "delete",
+        "table": "tasks"
+      },
+      "permission": "deny",
+      "response": null,
+      "status": 204
+    },
+    "L3": {
+      "auth_session_delta": 0,
+      "effect": {
+        "kind": "none"
+      },
+      "permission": "allow",
+      "response": [
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 1,
+          "description": "",
+          "id": 1,
+          "organization_id": 1,
+          "project_id": 1,
+          "status": "todo",
+          "title": "Synthetic task 1",
+          "updated_at": "2026-11-14T12:00:00Z"
+        },
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 7,
+          "description": "",
+          "id": 2,
+          "organization_id": 1,
+          "project_id": 2,
+          "status": "todo",
+          "title": "Synthetic task 2",
+          "updated_at": "2026-11-14T12:00:00Z"
+        },
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 5,
+          "description": "",
+          "id": 3,
+          "organization_id": 2,
+          "project_id": 3,
+          "status": "todo",
+          "title": "Synthetic task 3",
+          "updated_at": "2026-11-14T12:00:00Z"
+        }
+      ],
+      "status": 200
+    },
+    "L4": {
+      "auth_session_delta": 0,
+      "effect": {
+        "kind": "none"
+      },
+      "permission": "deny",
+      "response": [
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 1,
+          "description": "",
+          "id": 1,
+          "organization_id": 1,
+          "project_id": 1,
+          "status": "todo",
+          "title": "Synthetic task 1",
+          "updated_at": "2026-11-14T12:00:00Z"
+        },
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 7,
+          "description": "",
+          "id": 2,
+          "organization_id": 1,
+          "project_id": 2,
+          "status": "todo",
+          "title": "Synthetic task 2",
+          "updated_at": "2026-11-14T12:00:00Z"
+        },
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 5,
+          "description": "",
+          "id": 3,
+          "organization_id": 2,
+          "project_id": 3,
+          "status": "todo",
+          "title": "Synthetic task 3",
+          "updated_at": "2026-11-14T12:00:00Z"
+        }
+      ],
+      "status": 200
+    },
+    "L5": {
+      "auth_session_delta": 0,
+      "effect": {
+        "kind": "none"
+      },
+      "permission": "deny",
+      "response": [
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 1,
+          "description": "",
+          "id": 1,
+          "organization_id": 1,
+          "project_id": 1,
+          "status": "todo",
+          "title": "Synthetic task 1",
+          "updated_at": "2026-11-14T12:00:00Z"
+        },
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 7,
+          "description": "",
+          "id": 2,
+          "organization_id": 1,
+          "project_id": 2,
+          "status": "todo",
+          "title": "Synthetic task 2",
+          "updated_at": "2026-11-14T12:00:00Z"
+        },
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 5,
+          "description": "",
+          "id": 3,
+          "organization_id": 2,
+          "project_id": 3,
+          "status": "todo",
+          "title": "Synthetic task 3",
+          "updated_at": "2026-11-14T12:00:00Z"
+        }
+      ],
+      "status": 200
+    },
+    "L6": {
+      "auth_session_delta": 0,
+      "effect": {
+        "kind": "none"
+      },
+      "permission": "allow",
+      "response": [
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 1,
+          "description": "",
+          "id": 1,
+          "organization_id": 1,
+          "project_id": 1,
+          "status": "todo",
+          "title": "Synthetic task 1",
+          "updated_at": "2026-11-14T12:00:00Z"
+        },
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 7,
+          "description": "",
+          "id": 2,
+          "organization_id": 1,
+          "project_id": 2,
+          "status": "todo",
+          "title": "Synthetic task 2",
+          "updated_at": "2026-11-14T12:00:00Z"
+        },
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 5,
+          "description": "",
+          "id": 3,
+          "organization_id": 2,
+          "project_id": 3,
+          "status": "todo",
+          "title": "Synthetic task 3",
+          "updated_at": "2026-11-14T12:00:00Z"
+        }
+      ],
+      "status": 200
+    },
+    "N2": {
+      "auth_session_delta": 0,
+      "effect": {
+        "kind": "none"
+      },
+      "permission": "deny",
+      "response": {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 1,
+        "description": "",
+        "id": 1,
+        "organization_id": 1,
+        "project_id": 1,
+        "status": "todo",
+        "title": "Synthetic task 1",
+        "updated_at": "2026-11-14T12:00:00Z"
+      },
+      "status": 200
+    },
+    "N3": {
+      "auth_session_delta": 0,
+      "effect": {
+        "kind": "insert",
+        "row": {
+          "created_at": "@runtime",
+          "created_by": 4,
+          "description": "",
+          "id": 4,
+          "organization_id": 1,
+          "project_id": 1,
+          "status": "todo",
+          "title": "Forbidden",
+          "updated_at": "@runtime"
+        },
+        "table": "tasks"
+      },
+      "permission": "deny",
+      "response": {
+        "created_at": "@runtime",
+        "created_by": 4,
+        "description": "",
+        "id": 4,
+        "organization_id": 1,
+        "project_id": 1,
+        "status": "todo",
+        "title": "Forbidden",
+        "updated_at": "@runtime"
+      },
+      "status": 201
+    },
+    "N4": {
+      "auth_session_delta": 0,
+      "effect": {
+        "key": {
+          "id": 1
+        },
+        "kind": "update",
+        "table": "tasks",
+        "values": {
+          "title": "Forbidden",
+          "updated_at": "@runtime"
+        }
+      },
+      "permission": "deny",
+      "response": {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 1,
+        "description": "",
+        "id": 1,
+        "organization_id": 1,
+        "project_id": 1,
+        "status": "todo",
+        "title": "Forbidden",
+        "updated_at": "@runtime"
+      },
+      "status": 200
+    },
+    "N5": {
+      "auth_session_delta": 0,
+      "effect": {
+        "key": {
+          "id": 1
+        },
+        "kind": "delete",
+        "table": "tasks"
+      },
+      "permission": "deny",
+      "response": null,
+      "status": 204
+    },
+    "R4": {
+      "auth_session_delta": 0,
+      "effect": {
+        "key": {
+          "id": 1
+        },
+        "kind": "update",
+        "table": "tasks",
+        "values": {
+          "title": "Forbidden",
+          "updated_at": "@runtime"
+        }
+      },
+      "permission": "deny",
+      "response": {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 1,
+        "description": "",
+        "id": 1,
+        "organization_id": 1,
+        "project_id": 1,
+        "status": "todo",
+        "title": "Forbidden",
+        "updated_at": "@runtime"
+      },
+      "status": 200
+    },
+    "R5": {
+      "auth_session_delta": 0,
+      "effect": {
+        "kind": "none"
+      },
+      "permission": "deny",
+      "response": {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 1,
+        "description": "",
+        "id": 1,
+        "organization_id": 1,
+        "project_id": 1,
+        "status": "todo",
+        "title": "Synthetic task 1",
+        "updated_at": "2026-11-14T12:00:00Z"
+      },
+      "status": 200
+    },
+    "R6": {
+      "auth_session_delta": 0,
+      "effect": {
+        "key": {
+          "id": 1
+        },
+        "kind": "update",
+        "table": "tasks",
+        "values": {
+          "title": "Forbidden",
+          "updated_at": "@runtime"
+        }
+      },
+      "permission": "deny",
+      "response": {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 1,
+        "description": "",
+        "id": 1,
+        "organization_id": 1,
+        "project_id": 1,
+        "status": "todo",
+        "title": "Forbidden",
+        "updated_at": "@runtime"
+      },
+      "status": 200
+    },
+    "S1": {
+      "auth_session_delta": 0,
+      "effect": {
+        "kind": "none"
+      },
+      "permission": "allow",
+      "response": [
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 1,
+          "description": "",
+          "id": 1,
+          "organization_id": 1,
+          "project_id": 1,
+          "status": "todo",
+          "title": "Synthetic task 1",
+          "updated_at": "2026-11-14T12:00:00Z"
+        },
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 7,
+          "description": "",
+          "id": 2,
+          "organization_id": 1,
+          "project_id": 2,
+          "status": "todo",
+          "title": "Synthetic task 2",
+          "updated_at": "2026-11-14T12:00:00Z"
+        },
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 5,
+          "description": "",
+          "id": 3,
+          "organization_id": 2,
+          "project_id": 3,
+          "status": "todo",
+          "title": "Synthetic task 3",
+          "updated_at": "2026-11-14T12:00:00Z"
+        }
+      ],
+      "status": 200
+    },
+    "S5": {
+      "auth_session_delta": 0,
+      "effect": {
+        "kind": "none"
+      },
+      "permission": "deny",
+      "response": [
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 1,
+          "description": "",
+          "id": 1,
+          "organization_id": 1,
+          "project_id": 1,
+          "status": "todo",
+          "title": "Synthetic task 1",
+          "updated_at": "2026-11-14T12:00:00Z"
+        },
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 7,
+          "description": "",
+          "id": 2,
+          "organization_id": 1,
+          "project_id": 2,
+          "status": "todo",
+          "title": "Synthetic task 2",
+          "updated_at": "2026-11-14T12:00:00Z"
+        },
+        {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 5,
+          "description": "",
+          "id": 3,
+          "organization_id": 2,
+          "project_id": 3,
+          "status": "todo",
+          "title": "Synthetic task 3",
+          "updated_at": "2026-11-14T12:00:00Z"
+        }
+      ],
+      "status": 200
+    },
+    "X3": {
+      "auth_session_delta": 0,
+      "effect": {
+        "kind": "none"
+      },
+      "permission": "deny",
+      "response": {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 1,
+        "description": "",
+        "id": 1,
+        "organization_id": 1,
+        "project_id": 1,
+        "status": "todo",
+        "title": "Synthetic task 1",
+        "updated_at": "2026-11-14T12:00:00Z"
+      },
+      "status": 200
+    },
+    "X4": {
+      "auth_session_delta": 0,
+      "effect": {
+        "kind": "insert",
+        "row": {
+          "created_at": "@runtime",
+          "created_by": 5,
+          "description": "",
+          "id": 4,
+          "organization_id": 1,
+          "project_id": 1,
+          "status": "todo",
+          "title": "Forbidden",
+          "updated_at": "@runtime"
+        },
+        "table": "tasks"
+      },
+      "permission": "deny",
+      "response": {
+        "created_at": "@runtime",
+        "created_by": 5,
+        "description": "",
+        "id": 4,
+        "organization_id": 1,
+        "project_id": 1,
+        "status": "todo",
+        "title": "Forbidden",
+        "updated_at": "@runtime"
+      },
+      "status": 201
+    },
+    "X5": {
+      "auth_session_delta": 0,
+      "effect": {
+        "key": {
+          "id": 1
+        },
+        "kind": "update",
+        "table": "tasks",
+        "values": {
+          "title": "Forbidden",
+          "updated_at": "@runtime"
+        }
+      },
+      "permission": "deny",
+      "response": {
+        "created_at": "2026-11-14T12:00:00Z",
+        "created_by": 1,
+        "description": "",
+        "id": 1,
+        "organization_id": 1,
+        "project_id": 1,
+        "status": "todo",
+        "title": "Forbidden",
+        "updated_at": "@runtime"
+      },
+      "status": 200
+    },
+    "X6": {
+      "auth_session_delta": 0,
+      "effect": {
+        "key": {
+          "id": 1
+        },
+        "kind": "delete",
+        "table": "tasks"
+      },
+      "permission": "deny",
+      "response": null,
+      "status": 204
+    }
+  },
+  "version": "profile-1"
+}

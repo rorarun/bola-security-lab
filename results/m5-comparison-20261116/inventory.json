@@ -1,0 +1,1721 @@
+{
+  "inventory_version": "m3a-2",
+  "scenarios": [
+    {
+      "actor_id": 1,
+      "category": "authentication",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 1,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "allow",
+        "response": {
+          "expires_in": 900,
+          "token_issued": true,
+          "token_type": "bearer"
+        },
+        "status": 200
+      },
+      "id": "H1",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "credential_case": "valid"
+        },
+        "method": "POST",
+        "path": "/auth/token"
+      },
+      "setup": [],
+      "title": "Valid login"
+    },
+    {
+      "actor_id": 1,
+      "category": "authentication",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Invalid credentials"
+        },
+        "status": 401
+      },
+      "id": "H2",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "credential_case": "wrong"
+        },
+        "method": "POST",
+        "path": "/auth/token"
+      },
+      "setup": [],
+      "title": "Wrong password"
+    },
+    {
+      "actor_id": 1,
+      "category": "authentication",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Invalid credentials"
+        },
+        "status": 401
+      },
+      "id": "H3",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [
+        "missing_token"
+      ],
+      "title": "Missing token"
+    },
+    {
+      "actor_id": 1,
+      "category": "authentication",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Invalid credentials"
+        },
+        "status": 401
+      },
+      "id": "H4",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [
+        "malformed_token"
+      ],
+      "title": "Malformed token"
+    },
+    {
+      "actor_id": 1,
+      "category": "authentication",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Invalid credentials"
+        },
+        "status": 401
+      },
+      "id": "H5",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [
+        "expired_token"
+      ],
+      "title": "Expired token"
+    },
+    {
+      "actor_id": 1,
+      "category": "authentication",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Invalid credentials"
+        },
+        "status": 401
+      },
+      "id": "H6",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [
+        "revoked_token"
+      ],
+      "title": "Revoked token"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "allow",
+        "response": {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 1,
+          "description": "",
+          "id": 1,
+          "organization_id": 1,
+          "project_id": 1,
+          "status": "todo",
+          "title": "Synthetic task 1",
+          "updated_at": "2026-11-14T12:00:00Z"
+        },
+        "status": 200
+      },
+      "id": "C1",
+      "permitted_control": true,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Owner reads task"
+    },
+    {
+      "actor_id": 2,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "insert",
+          "row": {
+            "created_at": "@runtime",
+            "created_by": 2,
+            "description": "Synthetic evaluation",
+            "id": 4,
+            "organization_id": 1,
+            "project_id": 1,
+            "status": "todo",
+            "title": "Evaluation task",
+            "updated_at": "@runtime"
+          },
+          "table": "tasks"
+        },
+        "permission": "allow",
+        "response": {
+          "created_at": "@runtime",
+          "created_by": 2,
+          "description": "Synthetic evaluation",
+          "id": 4,
+          "organization_id": 1,
+          "project_id": 1,
+          "status": "todo",
+          "title": "Evaluation task",
+          "updated_at": "@runtime"
+        },
+        "status": 201
+      },
+      "id": "C2",
+      "permitted_control": true,
+      "request": {
+        "body": {
+          "description": "Synthetic evaluation",
+          "title": "Evaluation task"
+        },
+        "method": "POST",
+        "path": "/organizations/1/projects/1/tasks"
+      },
+      "setup": [],
+      "title": "Editor creates task"
+    },
+    {
+      "actor_id": 2,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "key": {
+            "id": 1
+          },
+          "kind": "update",
+          "table": "tasks",
+          "values": {
+            "status": "done",
+            "title": "Evaluation update",
+            "updated_at": "@runtime"
+          }
+        },
+        "permission": "allow",
+        "response": {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 1,
+          "description": "",
+          "id": 1,
+          "organization_id": 1,
+          "project_id": 1,
+          "status": "done",
+          "title": "Evaluation update",
+          "updated_at": "@runtime"
+        },
+        "status": 200
+      },
+      "id": "C3",
+      "permitted_control": true,
+      "request": {
+        "body": {
+          "status": "done",
+          "title": "Evaluation update"
+        },
+        "method": "PATCH",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Editor updates owner-created task"
+    },
+    {
+      "actor_id": 3,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "allow",
+        "response": {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 1,
+          "description": "",
+          "id": 1,
+          "organization_id": 1,
+          "project_id": 1,
+          "status": "todo",
+          "title": "Synthetic task 1",
+          "updated_at": "2026-11-14T12:00:00Z"
+        },
+        "status": 200
+      },
+      "id": "C4",
+      "permitted_control": true,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Viewer reads task"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "key": {
+            "id": 1
+          },
+          "kind": "delete",
+          "table": "tasks"
+        },
+        "permission": "allow",
+        "response": null,
+        "status": 204
+      },
+      "id": "C5",
+      "permitted_control": true,
+      "request": {
+        "method": "DELETE",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Owner deletes task"
+    },
+    {
+      "actor_id": 4,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "project_create",
+          "row": {
+            "created_at": "@runtime",
+            "created_by": 4,
+            "description": "Synthetic evaluation",
+            "id": 4,
+            "name": "Evaluation project",
+            "organization_id": 1
+          }
+        },
+        "permission": "allow",
+        "response": {
+          "created_at": "@runtime",
+          "created_by": 4,
+          "description": "Synthetic evaluation",
+          "id": 4,
+          "name": "Evaluation project",
+          "organization_id": 1
+        },
+        "status": 201
+      },
+      "id": "C6",
+      "permitted_control": true,
+      "request": {
+        "body": {
+          "description": "Synthetic evaluation",
+          "name": "Evaluation project"
+        },
+        "method": "POST",
+        "path": "/organizations/1/projects"
+      },
+      "setup": [],
+      "title": "Organization member creates owned project"
+    },
+    {
+      "actor_id": 3,
+      "category": "authorization",
+      "defect_classes": [
+        "B05"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Insufficient project role"
+        },
+        "status": 403
+      },
+      "id": "A1",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "title": "Forbidden"
+        },
+        "method": "POST",
+        "path": "/organizations/1/projects/1/tasks"
+      },
+      "setup": [],
+      "title": "Viewer creates task"
+    },
+    {
+      "actor_id": 3,
+      "category": "authorization",
+      "defect_classes": [
+        "B03"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Insufficient project role"
+        },
+        "status": 403
+      },
+      "id": "A2",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "title": "Forbidden"
+        },
+        "method": "PATCH",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Viewer updates task"
+    },
+    {
+      "actor_id": 3,
+      "category": "authorization",
+      "defect_classes": [
+        "B04"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Insufficient project role"
+        },
+        "status": 403
+      },
+      "id": "A3",
+      "permitted_control": false,
+      "request": {
+        "method": "DELETE",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Viewer deletes task"
+    },
+    {
+      "actor_id": 2,
+      "category": "authorization",
+      "defect_classes": [
+        "B04"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Insufficient project role"
+        },
+        "status": 403
+      },
+      "id": "A4",
+      "permitted_control": false,
+      "request": {
+        "method": "DELETE",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Editor deletes task"
+    },
+    {
+      "actor_id": 2,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Insufficient project role"
+        },
+        "status": 403
+      },
+      "id": "A5",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "name": "Forbidden"
+        },
+        "method": "PATCH",
+        "path": "/organizations/1/projects/1"
+      },
+      "setup": [],
+      "title": "Editor updates project"
+    },
+    {
+      "actor_id": 2,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Insufficient project role"
+        },
+        "status": 403
+      },
+      "id": "A6",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "role": "editor",
+          "user_id": 6
+        },
+        "method": "POST",
+        "path": "/organizations/1/projects/1/memberships"
+      },
+      "setup": [],
+      "title": "Editor adds membership"
+    },
+    {
+      "actor_id": 4,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "N1",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1"
+      },
+      "setup": [],
+      "title": "Read project"
+    },
+    {
+      "actor_id": 4,
+      "category": "authorization",
+      "defect_classes": [
+        "B01"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "N2",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Read task"
+    },
+    {
+      "actor_id": 4,
+      "category": "authorization",
+      "defect_classes": [
+        "B05"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "N3",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "title": "Forbidden"
+        },
+        "method": "POST",
+        "path": "/organizations/1/projects/1/tasks"
+      },
+      "setup": [],
+      "title": "Create task"
+    },
+    {
+      "actor_id": 4,
+      "category": "authorization",
+      "defect_classes": [
+        "B03"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "N4",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "title": "Forbidden"
+        },
+        "method": "PATCH",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Update task"
+    },
+    {
+      "actor_id": 4,
+      "category": "authorization",
+      "defect_classes": [
+        "B04"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "N5",
+      "permitted_control": false,
+      "request": {
+        "method": "DELETE",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Delete task"
+    },
+    {
+      "actor_id": 4,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "N6",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/memberships"
+      },
+      "setup": [],
+      "title": "List memberships"
+    },
+    {
+      "actor_id": 5,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "X1",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1"
+      },
+      "setup": [],
+      "title": "Read organization"
+    },
+    {
+      "actor_id": 5,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "X2",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1"
+      },
+      "setup": [],
+      "title": "Read project"
+    },
+    {
+      "actor_id": 5,
+      "category": "authorization",
+      "defect_classes": [
+        "B01"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "X3",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Read task"
+    },
+    {
+      "actor_id": 5,
+      "category": "authorization",
+      "defect_classes": [
+        "B05"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "X4",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "title": "Forbidden"
+        },
+        "method": "POST",
+        "path": "/organizations/1/projects/1/tasks"
+      },
+      "setup": [],
+      "title": "Create task"
+    },
+    {
+      "actor_id": 5,
+      "category": "authorization",
+      "defect_classes": [
+        "B03"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "X5",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "title": "Forbidden"
+        },
+        "method": "PATCH",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Update task"
+    },
+    {
+      "actor_id": 5,
+      "category": "authorization",
+      "defect_classes": [
+        "B04"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "X6",
+      "permitted_control": false,
+      "request": {
+        "method": "DELETE",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Delete task"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "allow",
+        "response": [
+          {
+            "created_at": "2026-11-14T12:00:00Z",
+            "created_by": 1,
+            "id": 1,
+            "name": "Alpha Lab"
+          }
+        ],
+        "status": 200
+      },
+      "id": "L1",
+      "permitted_control": true,
+      "request": {
+        "method": "GET",
+        "path": "/organizations"
+      },
+      "setup": [],
+      "title": "Exact organization list"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "allow",
+        "response": [
+          {
+            "created_at": "2026-11-14T12:00:00Z",
+            "created_by": 1,
+            "description": "",
+            "id": 1,
+            "name": "Alpha Collaboration",
+            "organization_id": 1
+          }
+        ],
+        "status": 200
+      },
+      "id": "L2",
+      "permitted_control": true,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects"
+      },
+      "setup": [],
+      "title": "Exact project list"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [
+        "B02"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "allow",
+        "response": [
+          {
+            "created_at": "2026-11-14T12:00:00Z",
+            "created_by": 1,
+            "description": "",
+            "id": 1,
+            "organization_id": 1,
+            "project_id": 1,
+            "status": "todo",
+            "title": "Synthetic task 1",
+            "updated_at": "2026-11-14T12:00:00Z"
+          }
+        ],
+        "status": 200
+      },
+      "id": "L3",
+      "permitted_control": true,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks"
+      },
+      "setup": [],
+      "title": "Exact task list"
+    },
+    {
+      "actor_id": 4,
+      "category": "authorization",
+      "defect_classes": [
+        "B02"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "L4",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks"
+      },
+      "setup": [],
+      "title": "Nonmember task list"
+    },
+    {
+      "actor_id": 5,
+      "category": "authorization",
+      "defect_classes": [
+        "B02"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "L5",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks"
+      },
+      "setup": [],
+      "title": "Cross-organization task list"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "allow",
+        "response": [],
+        "status": 200
+      },
+      "id": "L6",
+      "permitted_control": true,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/4/tasks"
+      },
+      "setup": [
+        "empty_project"
+      ],
+      "title": "Authorized empty project list"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "I1",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/2/projects/1"
+      },
+      "setup": [
+        "dual_organization"
+      ],
+      "title": "Wrong org/project with caller in both organizations"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [
+        "B01"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "I2",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks/2"
+      },
+      "setup": [],
+      "title": "Mismatched task read"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [
+        "B03"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "I3",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "title": "Forbidden"
+        },
+        "method": "PATCH",
+        "path": "/organizations/1/projects/1/tasks/2"
+      },
+      "setup": [],
+      "title": "Mismatched task update"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [
+        "B04"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "I4",
+      "permitted_control": false,
+      "request": {
+        "method": "DELETE",
+        "path": "/organizations/1/projects/1/tasks/2"
+      },
+      "setup": [],
+      "title": "Mismatched task delete"
+    },
+    {
+      "actor_id": 1,
+      "category": "validation",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": [
+            {
+              "loc": [
+                "body",
+                "project_id"
+              ],
+              "msg": "Invalid request field",
+              "type": "extra_forbidden"
+            }
+          ]
+        },
+        "status": 422
+      },
+      "id": "I5",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "project_id": 2
+        },
+        "method": "PATCH",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Reject body project_id reassignment"
+    },
+    {
+      "actor_id": 1,
+      "category": "validation",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": [
+            {
+              "loc": [
+                "body",
+                "organization_id"
+              ],
+              "msg": "Invalid request field",
+              "type": "extra_forbidden"
+            }
+          ]
+        },
+        "status": 422
+      },
+      "id": "I6",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "organization_id": 2
+        },
+        "method": "PATCH",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Reject body organization_id reassignment"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "insert",
+          "row": {
+            "organization_id": 1,
+            "project_id": 1,
+            "role": "editor",
+            "user_id": 6
+          },
+          "table": "project_memberships"
+        },
+        "permission": "allow",
+        "response": {
+          "organization_id": 1,
+          "project_id": 1,
+          "role": "editor",
+          "user_id": 6
+        },
+        "status": 201
+      },
+      "id": "R1",
+      "permitted_control": true,
+      "request": {
+        "body": {
+          "role": "editor",
+          "user_id": 6
+        },
+        "method": "POST",
+        "path": "/organizations/1/projects/1/memberships"
+      },
+      "setup": [],
+      "title": "Owner adds editor"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "key": {
+            "project_id": 1,
+            "user_id": 2
+          },
+          "kind": "update",
+          "table": "project_memberships",
+          "values": {
+            "role": "viewer"
+          }
+        },
+        "permission": "allow",
+        "response": {
+          "organization_id": 1,
+          "project_id": 1,
+          "role": "viewer",
+          "user_id": 2
+        },
+        "status": 200
+      },
+      "id": "R2",
+      "permitted_control": true,
+      "request": {
+        "body": {
+          "role": "viewer"
+        },
+        "method": "PATCH",
+        "path": "/organizations/1/projects/1/memberships/2"
+      },
+      "setup": [],
+      "title": "Owner downgrades editor"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Owner cannot be removed, demoted or transferred"
+        },
+        "status": 409
+      },
+      "id": "R3",
+      "permitted_control": false,
+      "request": {
+        "method": "DELETE",
+        "path": "/organizations/1/projects/1/memberships/1"
+      },
+      "setup": [],
+      "title": "Owner removal rejected"
+    },
+    {
+      "actor_id": 2,
+      "category": "authorization",
+      "defect_classes": [
+        "B03"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Insufficient project role"
+        },
+        "status": 403
+      },
+      "id": "R4",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "title": "Forbidden"
+        },
+        "method": "PATCH",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [
+        "downgrade_editor"
+      ],
+      "title": "Downgraded member loses writes with same token"
+    },
+    {
+      "actor_id": 6,
+      "category": "authorization",
+      "defect_classes": [
+        "B01"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "R5",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [
+        "grant_then_revoke"
+      ],
+      "title": "Removed member loses reads with same token"
+    },
+    {
+      "actor_id": 6,
+      "category": "authorization",
+      "defect_classes": [
+        "B03"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "R6",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "title": "Forbidden"
+        },
+        "method": "PATCH",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [
+        "grant_then_revoke"
+      ],
+      "title": "Removed member loses writes with same token"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "insert",
+          "row": {
+            "created_at": "@runtime",
+            "created_by": 1,
+            "description": "Synthetic evaluation",
+            "id": 4,
+            "organization_id": 1,
+            "project_id": 1,
+            "status": "todo",
+            "title": "Evaluation task",
+            "updated_at": "@runtime"
+          },
+          "table": "tasks"
+        },
+        "permission": "allow",
+        "response": {
+          "created_at": "@runtime",
+          "created_by": 1,
+          "description": "Synthetic evaluation",
+          "id": 4,
+          "organization_id": 1,
+          "project_id": 1,
+          "status": "todo",
+          "title": "Evaluation task",
+          "updated_at": "@runtime"
+        },
+        "status": 201
+      },
+      "id": "E1",
+      "permitted_control": true,
+      "request": {
+        "body": {
+          "description": "Synthetic evaluation",
+          "title": "Evaluation task"
+        },
+        "method": "POST",
+        "path": "/organizations/1/projects/1/tasks"
+      },
+      "setup": [],
+      "title": "Owner creates task"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "key": {
+            "id": 1
+          },
+          "kind": "update",
+          "table": "tasks",
+          "values": {
+            "status": "done",
+            "title": "Evaluation update",
+            "updated_at": "@runtime"
+          }
+        },
+        "permission": "allow",
+        "response": {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 1,
+          "description": "",
+          "id": 1,
+          "organization_id": 1,
+          "project_id": 1,
+          "status": "done",
+          "title": "Evaluation update",
+          "updated_at": "@runtime"
+        },
+        "status": 200
+      },
+      "id": "E2",
+      "permitted_control": true,
+      "request": {
+        "body": {
+          "status": "done",
+          "title": "Evaluation update"
+        },
+        "method": "PATCH",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Owner updates task"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "key": {
+            "id": 1
+          },
+          "kind": "update",
+          "table": "projects",
+          "values": {
+            "name": "Evaluation rename"
+          }
+        },
+        "permission": "allow",
+        "response": {
+          "created_at": "2026-11-14T12:00:00Z",
+          "created_by": 1,
+          "description": "",
+          "id": 1,
+          "name": "Evaluation rename",
+          "organization_id": 1
+        },
+        "status": 200
+      },
+      "id": "E3",
+      "permitted_control": true,
+      "request": {
+        "body": {
+          "name": "Evaluation rename"
+        },
+        "method": "PATCH",
+        "path": "/organizations/1/projects/1"
+      },
+      "setup": [],
+      "title": "Owner updates project"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "id": 1,
+          "kind": "project_delete"
+        },
+        "permission": "allow",
+        "response": null,
+        "status": 204
+      },
+      "id": "E4",
+      "permitted_control": true,
+      "request": {
+        "method": "DELETE",
+        "path": "/organizations/1/projects/1"
+      },
+      "setup": [],
+      "title": "Owner deletes project and its children"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "allow",
+        "response": [
+          {
+            "organization_id": 1,
+            "project_id": 1,
+            "role": "owner",
+            "user_id": 1
+          },
+          {
+            "organization_id": 1,
+            "project_id": 1,
+            "role": "editor",
+            "user_id": 2
+          },
+          {
+            "organization_id": 1,
+            "project_id": 1,
+            "role": "viewer",
+            "user_id": 3
+          }
+        ],
+        "status": 200
+      },
+      "id": "E5",
+      "permitted_control": true,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/memberships"
+      },
+      "setup": [],
+      "title": "Owner lists exact memberships"
+    },
+    {
+      "actor_id": 1,
+      "category": "validation",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": [
+            {
+              "loc": [
+                "body",
+                "role"
+              ],
+              "msg": "Invalid request field",
+              "type": "literal_error"
+            }
+          ]
+        },
+        "status": 422
+      },
+      "id": "E6",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "role": "owner",
+          "user_id": 6
+        },
+        "method": "POST",
+        "path": "/organizations/1/projects/1/memberships"
+      },
+      "setup": [],
+      "title": "Second owner assignment rejected"
+    },
+    {
+      "actor_id": 3,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "insert",
+          "row": {
+            "created_at": "@runtime",
+            "created_by": 3,
+            "description": "Synthetic evaluation",
+            "id": 4,
+            "organization_id": 1,
+            "project_id": 1,
+            "status": "todo",
+            "title": "Evaluation task",
+            "updated_at": "@runtime"
+          },
+          "table": "tasks"
+        },
+        "permission": "allow",
+        "response": {
+          "created_at": "@runtime",
+          "created_by": 3,
+          "description": "Synthetic evaluation",
+          "id": 4,
+          "organization_id": 1,
+          "project_id": 1,
+          "status": "todo",
+          "title": "Evaluation task",
+          "updated_at": "@runtime"
+        },
+        "status": 201
+      },
+      "id": "E7",
+      "permitted_control": true,
+      "request": {
+        "body": {
+          "description": "Synthetic evaluation",
+          "title": "Evaluation task"
+        },
+        "method": "POST",
+        "path": "/organizations/1/projects/1/tasks"
+      },
+      "setup": [
+        "promote_viewer"
+      ],
+      "title": "Promoted viewer creates task with same token"
+    },
+    {
+      "actor_id": 7,
+      "category": "authorization",
+      "defect_classes": [
+        "B01"
+      ],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "E8",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks/1"
+      },
+      "setup": [],
+      "title": "Other-project owner cannot read task"
+    }
+  ],
+  "schema_version": 1
+}
