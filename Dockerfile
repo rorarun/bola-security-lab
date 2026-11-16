@@ -15,6 +15,7 @@ FROM base AS test
 USER root
 RUN pip install --no-cache-dir -r requirements-dev.lock
 COPY tests ./tests
+COPY laboratory ./laboratory
 COPY compose.yaml ./compose.yaml
 COPY .github/workflows/ci.yml ./.github/workflows/ci.yml
 RUN chmod -R a+rX /app

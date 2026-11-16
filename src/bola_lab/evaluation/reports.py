@@ -113,7 +113,7 @@ def summarize(specs, observations, evaluations, run_errors=()):
 def regenerate(directory: Path):
     manifest = json.loads((directory / "manifest.json").read_text())
     if (
-        manifest["configuration"] != "hardened"
+        manifest["configuration"] not in {"hardened", "endpoint"}
         or manifest["implementation"] != "endpoint-specific"
         or manifest["known_present_seeded_defects"]
     ):

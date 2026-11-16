@@ -86,7 +86,7 @@ def sessions(settings):
 
 
 @contextmanager
-def live_server(settings):
+def live_server(settings, treatment="endpoint"):
     """No remote URL input, published port, ASGI mock transport, or shared application DB."""
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as listener:
         listener.bind(("127.0.0.1", 0))
@@ -101,12 +101,25 @@ def live_server(settings):
             BOLA_AUTHORIZATION_MODE="hardened",
             BOLA_BIND_HOST="127.0.0.1",
         )
+        factory = "bola_lab.main:create_app"
+        if treatment in {"endpoint", "baseline"}:
+            environment.update(
+                BOLA_ENVIRONMENT="lab", BOLA_AUTHORIZATION_MODE="endpoint", BOLA_LAB_OPT_IN="true"
+            )
+        if treatment == "baseline":
+            factory = "laboratory.app:create_lab_app"
+            environment.update(
+                BOLA_LOCAL_DEFECT_LAB="explicit-synthetic-lab-only",
+                BOLA_LAB_LISTENER_FD=str(listener.fileno()),
+            )
+        elif treatment not in {"endpoint", "centralized"}:
+            raise ValueError("Unknown treatment")
         process = subprocess.Popen(
             [
                 sys.executable,
                 "-m",
                 "uvicorn",
-                "bola_lab.main:create_app",
+                factory,
                 "--factory",
                 "--fd",
                 str(listener.fileno()),
@@ -419,7 +432,7 @@ def run(output: Path):
         "milestone": "M3-A",
         "started_at": now(),
         "finished_at": None,
-        "configuration": "hardened",
+        "configuration": "endpoint",
         "implementation": "endpoint-specific",
         "inventory_sha256": inventory_hash,
         "fixture_sha256": digest(PACKAGE / "fixture.json"),

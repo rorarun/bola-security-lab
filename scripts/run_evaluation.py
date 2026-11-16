@@ -17,6 +17,9 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument(
+        "--study", action="store_true", help="Run the complete three-treatment study"
+    )
     args = parser.parse_args()
     if args.output.exists():
         raise SystemExit("Choose a new evidence directory; existing evidence is never overwritten")
@@ -42,7 +45,7 @@ def main():
         "test",
         "python",
         "-m",
-        "bola_lab.evaluation.runner",
+        "bola_lab.evaluation.study" if args.study else "bola_lab.evaluation.runner",
         "--output",
         "/tmp/m3a-run",
         "--stream-archive",
@@ -59,17 +62,27 @@ def main():
     args.output.mkdir(parents=True)
     with tarfile.open(fileobj=io.BytesIO(base64.b64decode(match[1])), mode="r:gz") as archive:
         for item in archive.getmembers():
-            if not item.isfile() or Path(item.name).name != item.name or item.name in {".", ".."}:
+            relative = Path(item.name)
+            if (
+                not item.isfile()
+                or relative.is_absolute()
+                or ".." in relative.parts
+                or item.name in {".", ".."}
+            ):
                 raise ValueError("Unsafe evidence archive member")
             data = archive.extractfile(item).read()
-            (args.output / item.name).write_bytes(data)
+            target = args.output / relative
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(data)
     manifest = json.loads((args.output / "manifest.json").read_text())
     actual_source = (manifest.get("source") or {}).get("source_sha256")
     if actual_source != source_hashes(Path.cwd()):
         raise SystemExit(
             "Image source does not match checkout; evidence retained but verification rejected"
         )
-    metrics = json.loads((args.output / "metrics.json").read_text())
+    metrics = json.loads(
+        (args.output / ("comparison.json" if args.study else "metrics.json")).read_text()
+    )
     print(
         json.dumps(
             {
