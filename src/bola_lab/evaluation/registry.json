@@ -1,0 +1,63 @@
+{
+  "control_exclusions": {
+    "L3": "Positive disclosure opportunity in global-list treatment",
+    "L6": "Positive parent-scope disclosure opportunity in global-list treatment"
+  },
+  "defects": [
+    {
+      "id": "B01",
+      "method": "GET",
+      "omission": "Object membership and supplied parent scope omitted",
+      "route": "task-detail",
+      "witness": "N2"
+    },
+    {
+      "id": "B02",
+      "method": "GET",
+      "omission": "Caller membership and tenant/project filtering omitted",
+      "route": "task-list",
+      "witness": "L4"
+    },
+    {
+      "id": "B03",
+      "method": "PATCH",
+      "omission": "Write permission and supplied parent scope omitted",
+      "route": "task-detail",
+      "witness": "N4"
+    },
+    {
+      "id": "B04",
+      "method": "DELETE",
+      "omission": "Owner permission and supplied parent scope omitted",
+      "route": "task-detail",
+      "witness": "N5"
+    },
+    {
+      "id": "B05",
+      "method": "POST",
+      "omission": "Target project membership and create role omitted",
+      "route": "task-list",
+      "witness": "N3"
+    }
+  ],
+  "evaluator_version": "study-1",
+  "negative_controls": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "L1",
+    "L2",
+    "R1",
+    "R2",
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E7"
+  ],
+  "version": "study-1"
+}
