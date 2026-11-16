@@ -5,7 +5,8 @@
 COMP 3123 — Computer Security, Fall 2026. Submission: November 24, 2026.
 
 This is a synthetic, local research laboratory, not a general-purpose scanner.
-**Current milestone: M2 functional API.** Authentication, organizations, projects, memberships and
+**Current milestone: M3-A authorization evaluation framework.** The M2 API remains defensive.
+Authentication, organizations, projects, memberships and
 task CRUD are implemented with endpoint-specific authorization. Owner/editor/viewer permissions,
 current membership, tenant boundaries and parent relationships are checked server-side.
 The safe `hardened` default currently selects this defensive endpoint-specific implementation;
@@ -63,6 +64,16 @@ Stop with `docker compose down` (retains data). `docker compose down -v` also de
 - [Threat model and boundaries](docs/threat-model.md)
 - [Experiment methodology and planned inventories](docs/experiment-plan.md)
 - [Evidence status](results/README.md)
+- [M3-A methodology](docs/evaluation/methodology.md), [frozen scenarios](docs/evaluation/scenarios.md),
+  [defect-class mapping](docs/evaluation/defect-inventory.md), and [reproduction](docs/evaluation/reproduction.md)
+- [Actual M3-A verification and evidence](docs/evaluation/verification.md)
+
+M3-A evaluates 56 independently specified scenarios against the existing API using a harness-owned
+loopback HTTP server and `bola_lab_evaluation_test`. It adds no authorization configuration or seeded
+vulnerability. Start with the reproduction guide; existing output directories are never overwritten.
+Reports derive from checksummed observations and explicitly identify incomplete runs. Seeded-defect
+recall remains unavailable until a labelled defective configuration is separately authorized and run.
+The initial v1 oracle-ordering failure and its explicit v2 amendment are preserved for transparency.
 
 Only synthetic records and local targets are permitted. A private repository does not make a
 vulnerable service safe. M2 rejects baseline startup even with laboratory opt-in.

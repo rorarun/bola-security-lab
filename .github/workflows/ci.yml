@@ -19,6 +19,7 @@ jobs:
           --health-interval 2s --health-timeout 3s --health-retries 30
     env:
       BOLA_TEST_DATABASE_URL: postgresql://bola_lab:synthetic-ci-only@127.0.0.1:5432/bola_lab_test
+      BOLA_EVALUATION_DATABASE_URL: postgresql://bola_lab:synthetic-ci-only@127.0.0.1:5432/bola_lab_evaluation_test
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -31,9 +32,33 @@ jobs:
       - run: ruff check .
       - run: ruff format --check .
       - run: docker compose config --quiet
-      - run: pytest --junitxml=results/m2-junit.xml
+      - run: pytest --junitxml=results/m3a-regression.xml
+      - name: Create isolated local evaluation database
+        run: |
+          python - <<'PY'
+          import os
+          import psycopg
+          with psycopg.connect(os.environ['BOLA_TEST_DATABASE_URL'], autocommit=True) as conn:
+              conn.execute('CREATE DATABASE bola_lab_evaluation_test')
+          PY
+      - name: Execute frozen real HTTP scenarios
+        run: python -m bola_lab.evaluation.runner --output results/m3a/ci
+      - name: Verify reports regenerate from preserved observations
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from bola_lab.evaluation.models import digest
+          from bola_lab.evaluation.reports import regenerate
+          directory = Path('results/m3a/ci')
+          names = ['metrics.json', 'evaluations.json', 'observations.csv', 'junit.xml', 'summary.md']
+          before = {name: digest(directory / name) for name in names}
+          regenerate(directory)
+          assert before == {name: digest(directory / name) for name in names}
+          PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: m2-api-checks
-          path: results/m2-junit.xml
+          name: m3a-verification
+          path: |
+            results/m3a-regression.xml
+            results/m3a/ci/

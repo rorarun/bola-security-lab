@@ -1,0 +1,67 @@
+{
+  "authorization_enforcement_accuracy": {
+    "complete": true,
+    "denominator": 47,
+    "excluded_ids": [],
+    "numerator": 47,
+    "planned_eligible": 47,
+    "value": 1.0
+  },
+  "category_counts": {
+    "authentication": 6,
+    "authorization": 47,
+    "validation": 3
+  },
+  "counts": {
+    "execution_error_ids": [],
+    "failed": 0,
+    "http_responses_received": 56,
+    "inconclusive": 0,
+    "passed": 56,
+    "planned": 56,
+    "request_attempted": 56,
+    "run_error_count": 0
+  },
+  "detector_false_positive_rate": {
+    "complete": true,
+    "denominator": 18,
+    "excluded_ids": [],
+    "numerator": 0,
+    "planned_eligible": 18,
+    "value": 0.0
+  },
+  "detector_findings": {
+    "distinct_observed_class_count": 0,
+    "distinct_observed_classes": [],
+    "observation_count": 0
+  },
+  "evidence_kind": "executed defensive API evaluation",
+  "implementation": "endpoint-specific",
+  "legitimate_operation_success_rate": {
+    "complete": true,
+    "denominator": 18,
+    "excluded_ids": [],
+    "numerator": 18,
+    "planned_eligible": 18,
+    "value": 1.0
+  },
+  "live_seeded_defect_recall": {
+    "denominator": 0,
+    "known_present_evaluated": [],
+    "numerator": 0,
+    "planned_inventory_total": 5,
+    "reason": "No labelled defective API configuration evaluated in M3-A",
+    "value": null
+  },
+  "run_complete": true,
+  "run_passed": true,
+  "schema_version": 1,
+  "unauthorized_operation_success_rate": {
+    "complete": true,
+    "denominator": 29,
+    "excluded_ids": [],
+    "numerator": 0,
+    "planned_eligible": 29,
+    "value": 0.0
+  }
+}
