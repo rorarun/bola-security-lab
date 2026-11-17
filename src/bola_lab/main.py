@@ -15,13 +15,12 @@ from bola_lab.auth import (
 )
 from bola_lab.config import Settings
 from bola_lab.db import connect
-from bola_lab.endpoint_api import router as resource_router
 from bola_lab.identity import authenticated_user, unauthorized
 from bola_lab.migrations import verify_schema
 from bola_lab.schemas import Credentials, TokenResponse, UserResponse
 
 
-def create_app(settings: Settings | None = None) -> FastAPI:
+def create_authenticated_app(settings: Settings | None = None) -> FastAPI:
     settings = settings or Settings.from_env()
 
     @asynccontextmanager
@@ -117,6 +116,19 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             )
         return Response(status_code=204)
 
-    app.state.authorization_implementation = "endpoint-specific"
+    return app
+
+
+def create_app(settings: Settings | None = None) -> FastAPI:
+    settings = settings or Settings.from_env()
+    app = create_authenticated_app(settings)
+    if settings.authorization_mode == "endpoint":
+        from bola_lab.endpoint_api import router as resource_router
+
+        app.state.authorization_implementation = "endpoint-specific"
+    else:
+        from bola_lab.central_api import router as resource_router
+
+        app.state.authorization_implementation = "centralized"
     app.include_router(resource_router)
     return app

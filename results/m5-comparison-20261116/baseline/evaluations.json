@@ -1,0 +1,1568 @@
+[
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "not_applicable",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "H1",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "H1",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "not_applicable",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "H2",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "H2",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "not_applicable",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "H3",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "H3",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "not_applicable",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "H4",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "H4",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "not_applicable",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "H5",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "H5",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "not_applicable",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "H6",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "H6",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "no_finding"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "C1",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "C1",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "no_finding"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "C2",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "C2",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "no_finding"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "C3",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "C3",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "no_finding"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "C4",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "C4",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "no_finding"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "C5",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "C5",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "C6",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "C6",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B05"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "A1",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [
+      {
+        "id": 4,
+        "operation": "added",
+        "project_id": 1,
+        "table": "tasks"
+      }
+    ],
+    "scenario_id": "A1",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B03"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "A2",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [
+      {
+        "id": 1,
+        "operation": "changed",
+        "project_id": 1,
+        "table": "tasks"
+      }
+    ],
+    "scenario_id": "A2",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B04"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "A3",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [
+      {
+        "id": 1,
+        "operation": "removed",
+        "project_id": 1,
+        "table": "tasks"
+      }
+    ],
+    "scenario_id": "A3",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B04"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "A4",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [
+      {
+        "id": 1,
+        "operation": "removed",
+        "project_id": 1,
+        "table": "tasks"
+      }
+    ],
+    "scenario_id": "A4",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "A5",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "A5",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "A6",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "A6",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "N1",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "N1",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B01"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [
+      {
+        "id": 1,
+        "matched_field": "title",
+        "table": "tasks"
+      }
+    ],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "N2",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [],
+    "scenario_id": "N2",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B05"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "N3",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [
+      {
+        "id": 4,
+        "operation": "added",
+        "project_id": 1,
+        "table": "tasks"
+      }
+    ],
+    "scenario_id": "N3",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B03"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "N4",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [
+      {
+        "id": 1,
+        "operation": "changed",
+        "project_id": 1,
+        "table": "tasks"
+      }
+    ],
+    "scenario_id": "N4",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B04"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "N5",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [
+      {
+        "id": 1,
+        "operation": "removed",
+        "project_id": 1,
+        "table": "tasks"
+      }
+    ],
+    "scenario_id": "N5",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "N6",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "N6",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "X1",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "X1",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "X2",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "X2",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B01"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [
+      {
+        "id": 1,
+        "matched_field": "title",
+        "table": "tasks"
+      }
+    ],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "X3",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [],
+    "scenario_id": "X3",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B05"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "X4",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [
+      {
+        "id": 4,
+        "operation": "added",
+        "project_id": 1,
+        "table": "tasks"
+      }
+    ],
+    "scenario_id": "X4",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B03"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "X5",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [
+      {
+        "id": 1,
+        "operation": "changed",
+        "project_id": 1,
+        "table": "tasks"
+      }
+    ],
+    "scenario_id": "X5",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B04"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "X6",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [
+      {
+        "id": 1,
+        "operation": "removed",
+        "project_id": 1,
+        "table": "tasks"
+      }
+    ],
+    "scenario_id": "X6",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "L1",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "L1",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "L2",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "L2",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B02"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [
+      {
+        "id": 2,
+        "matched_field": "title",
+        "table": "tasks"
+      },
+      {
+        "id": 3,
+        "matched_field": "title",
+        "table": "tasks"
+      }
+    ],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "L3",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [],
+    "scenario_id": "L3",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B02"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [
+      {
+        "id": 1,
+        "matched_field": "title",
+        "table": "tasks"
+      },
+      {
+        "id": 2,
+        "matched_field": "title",
+        "table": "tasks"
+      },
+      {
+        "id": 3,
+        "matched_field": "title",
+        "table": "tasks"
+      }
+    ],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "L4",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [],
+    "scenario_id": "L4",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B02"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [
+      {
+        "id": 1,
+        "matched_field": "title",
+        "table": "tasks"
+      },
+      {
+        "id": 2,
+        "matched_field": "title",
+        "table": "tasks"
+      },
+      {
+        "id": 3,
+        "matched_field": "title",
+        "table": "tasks"
+      }
+    ],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "L5",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [],
+    "scenario_id": "L5",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B02"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [
+      {
+        "id": 1,
+        "matched_field": "title",
+        "table": "tasks"
+      },
+      {
+        "id": 2,
+        "matched_field": "title",
+        "table": "tasks"
+      },
+      {
+        "id": 3,
+        "matched_field": "title",
+        "table": "tasks"
+      }
+    ],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "L6",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [],
+    "scenario_id": "L6",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "I1",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "I1",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B01"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [
+      {
+        "id": 2,
+        "matched_field": "title",
+        "table": "tasks"
+      }
+    ],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "I2",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [],
+    "scenario_id": "I2",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B03"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "I3",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [
+      {
+        "id": 2,
+        "operation": "changed",
+        "project_id": 2,
+        "table": "tasks"
+      }
+    ],
+    "scenario_id": "I3",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B04"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "I4",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [
+      {
+        "id": 2,
+        "operation": "removed",
+        "project_id": 2,
+        "table": "tasks"
+      }
+    ],
+    "scenario_id": "I4",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "not_applicable",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "I5",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "I5",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "not_applicable",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "I6",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "I6",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "R1",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "R1",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "R2",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "R2",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "R3",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "R3",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B03"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "R4",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [
+      {
+        "id": 1,
+        "operation": "changed",
+        "project_id": 1,
+        "table": "tasks"
+      }
+    ],
+    "scenario_id": "R4",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B01"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [
+      {
+        "id": 1,
+        "matched_field": "title",
+        "table": "tasks"
+      }
+    ],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "R5",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [],
+    "scenario_id": "R5",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B03"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "R6",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [
+      {
+        "id": 1,
+        "operation": "changed",
+        "project_id": 1,
+        "table": "tasks"
+      }
+    ],
+    "scenario_id": "R6",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "no_finding"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "E1",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "E1",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "no_finding"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "E2",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "E2",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "E3",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "E3",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "E4",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "E4",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "E5",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "E5",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "not_applicable",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "E6",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "E6",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "no_finding"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "E7",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "E7",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B01"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [
+      {
+        "id": 1,
+        "matched_field": "title",
+        "table": "tasks"
+      }
+    ],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "E8",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [],
+    "scenario_id": "E8",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B02"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [
+      {
+        "id": 2,
+        "matched_field": "title",
+        "table": "tasks"
+      },
+      {
+        "id": 3,
+        "matched_field": "title",
+        "table": "tasks"
+      }
+    ],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "S1",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [],
+    "scenario_id": "S1",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "not_applicable",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "S2",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "S2",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "not_applicable",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "S3",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "S3",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "not_applicable",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "S4",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "S4",
+    "status": "passed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [
+        "B02"
+      ],
+      "verdict": "finding"
+    },
+    "disclosures": [
+      {
+        "id": 1,
+        "matched_field": "title",
+        "table": "tasks"
+      },
+      {
+        "id": 2,
+        "matched_field": "title",
+        "table": "tasks"
+      },
+      {
+        "id": 3,
+        "matched_field": "title",
+        "table": "tasks"
+      }
+    ],
+    "enforcement": "unauthorized_success",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "S5",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": true,
+    "functional_pass": false,
+    "mutations": [],
+    "scenario_id": "S5",
+    "status": "failed",
+    "verification_passed": true
+  },
+  {
+    "detector": {
+      "classes": [],
+      "verdict": "not_applicable"
+    },
+    "disclosures": [],
+    "enforcement": "compliant",
+    "evidence": {
+      "observation_file": "baseline/observations.jsonl",
+      "scenario_id": "S6",
+      "source_commit": "5369ac946df69a1213b7c2dd18c371e05e205f3f",
+      "treatment": "baseline"
+    },
+    "execution_errors": [],
+    "expected_seed_observation": false,
+    "functional_pass": true,
+    "mutations": [],
+    "scenario_id": "S6",
+    "status": "passed",
+    "verification_passed": true
+  }
+]

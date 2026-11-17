@@ -51,9 +51,15 @@ def client(empty_database):
         yield client
 
 
-@pytest.fixture
-def resource_client(seeded_database):
-    with TestClient(create_app(seeded_database)) as client:
+@pytest.fixture(params=["endpoint", "hardened"])
+def resource_client(seeded_database, request):
+    settings = Settings(
+        database_url=seeded_database.database_url,
+        environment="lab",
+        lab_opt_in=True,
+        authorization_mode=request.param,
+    )
+    with TestClient(create_app(settings)) as client:
         yield client
 
 

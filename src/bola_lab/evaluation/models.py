@@ -23,7 +23,7 @@ class Scenario(BaseModel):
     model_config = ConfigDict(extra="forbid")
     id: str
     title: str
-    category: Literal["authentication", "authorization", "validation"]
+    category: Literal["authentication", "authorization", "validation", "functional"]
     actor_id: int
     request: dict
     setup: list[str]
@@ -74,7 +74,7 @@ def ordered(rows):
 
 def source_hashes(root: Path = ROOT) -> dict:
     paths = []
-    for directory in ("src", "tests", "migrations"):
+    for directory in ("src", "tests", "migrations", "laboratory"):
         paths.extend(
             p
             for p in (root / directory).rglob("*")

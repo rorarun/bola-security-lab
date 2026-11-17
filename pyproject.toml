@@ -16,7 +16,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8,<10", "httpx>=0.28,<1", "ruff>=0.11,<1", "PyYAML>=6,<7"]
+dev = ["pytest>=8,<10", "httpx>=0.28,<1", "ruff>=0.11,<1", "PyYAML>=6,<7", "matplotlib>=3.9,<4"]
 
 [project.scripts]
 bola-lab = "bola_lab.cli:main"
@@ -28,6 +28,7 @@ where = ["src"]
 "bola_lab.evaluation" = ["*.json", "*.sha256"]
 
 [tool.pytest.ini_options]
+pythonpath = ["."]
 testpaths = ["tests"]
 addopts = "-ra --strict-markers"
 markers = ["integration: requires an explicitly configured disposable PostgreSQL test database"]

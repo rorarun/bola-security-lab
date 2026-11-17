@@ -1,0 +1,168 @@
+{
+  "inventory_version": "supplement-1",
+  "scenarios": [
+    {
+      "actor_id": 3,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "allow",
+        "response": [
+          {
+            "created_at": "2026-11-14T12:00:00Z",
+            "created_by": 1,
+            "description": "",
+            "id": 1,
+            "organization_id": 1,
+            "project_id": 1,
+            "status": "todo",
+            "title": "Synthetic task 1",
+            "updated_at": "2026-11-14T12:00:00Z"
+          }
+        ],
+        "status": 200
+      },
+      "id": "S1",
+      "permitted_control": true,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks"
+      },
+      "setup": [],
+      "title": "Viewer lists exact task scope"
+    },
+    {
+      "actor_id": 1,
+      "category": "functional",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "S2",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks/99999"
+      },
+      "setup": [],
+      "title": "Nonexistent task read"
+    },
+    {
+      "actor_id": 1,
+      "category": "functional",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "S3",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "title": "Missing"
+        },
+        "method": "PATCH",
+        "path": "/organizations/1/projects/1/tasks/99999"
+      },
+      "setup": [],
+      "title": "Nonexistent task update"
+    },
+    {
+      "actor_id": 1,
+      "category": "functional",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "S4",
+      "permitted_control": false,
+      "request": {
+        "method": "DELETE",
+        "path": "/organizations/1/projects/1/tasks/99999"
+      },
+      "setup": [],
+      "title": "Nonexistent task delete"
+    },
+    {
+      "actor_id": 6,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Resource not found"
+        },
+        "status": 404
+      },
+      "id": "S5",
+      "permitted_control": false,
+      "request": {
+        "method": "GET",
+        "path": "/organizations/1/projects/1/tasks"
+      },
+      "setup": [
+        "grant_then_revoke"
+      ],
+      "title": "Revoked member loses list access"
+    },
+    {
+      "actor_id": 1,
+      "category": "authorization",
+      "defect_classes": [],
+      "expected": {
+        "auth_session_delta": 0,
+        "effect": {
+          "kind": "none"
+        },
+        "permission": "deny",
+        "response": {
+          "detail": "Owner cannot be removed, demoted or transferred"
+        },
+        "status": 409
+      },
+      "id": "S6",
+      "permitted_control": false,
+      "request": {
+        "body": {
+          "role": "viewer"
+        },
+        "method": "PATCH",
+        "path": "/organizations/1/projects/1/memberships/1"
+      },
+      "setup": [],
+      "title": "Owner demotion rejected"
+    }
+  ],
+  "schema_version": 1
+}

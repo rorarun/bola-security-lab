@@ -485,6 +485,12 @@ def test_mid_operation_failure_rolls_back_all_rows(
 ):
     from bola_lab import repository
 
+    if (
+        hook == "create_task"
+        and resource_client.app.state.authorization_implementation == "centralized"
+    ):
+        from bola_lab import scoped_repository as repository
+
     original = getattr(repository, hook)
 
     def fail_after_insert(*args, **kwargs):

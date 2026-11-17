@@ -1,0 +1,114 @@
+{
+  "core": {
+    "authorization_eligible": 47,
+    "disclosure_scenarios": [],
+    "distinct_detected_verified_defects": [],
+    "distinct_verified_defects": [],
+    "enforcement_accuracy": {
+      "complete": true,
+      "denominator": 47,
+      "excluded_ids": [],
+      "numerator": 47,
+      "planned": 47,
+      "value": 1.0
+    },
+    "execution_error_ids": [],
+    "false_positive_rate": {
+      "complete": true,
+      "denominator": 16,
+      "excluded_ids": [],
+      "numerator": 0,
+      "planned": 16,
+      "value": 0.0
+    },
+    "inconclusive_ids": [],
+    "legitimate_operation_success": {
+      "complete": true,
+      "denominator": 18,
+      "excluded_ids": [],
+      "numerator": 18,
+      "planned": 18,
+      "value": 1.0
+    },
+    "mutation_scenarios": [],
+    "normative_failed": 0,
+    "normative_passed": 56,
+    "recall": {
+      "complete": true,
+      "denominator": 0,
+      "excluded_ids": [],
+      "numerator": 0,
+      "planned": 0,
+      "value": null
+    },
+    "recall_status": "not_applicable_no_known_present_defects",
+    "scenario_count": 56,
+    "scope_violations_during_permitted_requests": [],
+    "unauthorized_operation_success": {
+      "complete": true,
+      "denominator": 29,
+      "excluded_ids": [],
+      "numerator": 0,
+      "planned": 29,
+      "value": 0.0
+    },
+    "unexecuted_ids": []
+  },
+  "supplement": {
+    "authorization_eligible": 3,
+    "disclosure_scenarios": [],
+    "distinct_detected_verified_defects": [],
+    "distinct_verified_defects": [],
+    "enforcement_accuracy": {
+      "complete": true,
+      "denominator": 3,
+      "excluded_ids": [],
+      "numerator": 3,
+      "planned": 3,
+      "value": 1.0
+    },
+    "execution_error_ids": [],
+    "false_positive_rate": {
+      "complete": true,
+      "denominator": 0,
+      "excluded_ids": [],
+      "numerator": 0,
+      "planned": 0,
+      "value": null
+    },
+    "inconclusive_ids": [],
+    "legitimate_operation_success": {
+      "complete": true,
+      "denominator": 1,
+      "excluded_ids": [],
+      "numerator": 1,
+      "planned": 1,
+      "value": 1.0
+    },
+    "mutation_scenarios": [],
+    "normative_failed": 0,
+    "normative_passed": 6,
+    "recall": {
+      "complete": true,
+      "denominator": 0,
+      "excluded_ids": [],
+      "numerator": 0,
+      "planned": 0,
+      "value": null
+    },
+    "recall_status": "not_applicable_no_known_present_defects",
+    "scenario_count": 6,
+    "scope_violations_during_permitted_requests": [],
+    "unauthorized_operation_success": {
+      "complete": true,
+      "denominator": 2,
+      "excluded_ids": [],
+      "numerator": 0,
+      "planned": 2,
+      "value": 0.0
+    },
+    "unexecuted_ids": []
+  },
+  "unexpected_functional_regressions": [],
+  "verification_passed": true
+}
